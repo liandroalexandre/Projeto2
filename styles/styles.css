@@ -1,0 +1,280 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1be2f;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+}
+body {
+  margin: 0;
+  background-color: #f0f0ef; /* Cor das barras laterais */
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ace9ee90; /* Fundo do conteúdo */
+  padding: 20px;
+  box-sizing: border-box;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgba(39, 1, 1, 0.774);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+ul.fancy-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.fancy-list li {
+  background: #a9a6a6ce;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+table {
+  width: 35%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+td {
+  text-align: left;
+}
+
+#formulario_contacto {
+  max-width: 600px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#formulario_idioma {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#formulario_idioma label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+#formulario_idioma select {
+  width: 220px;
+  padding: 8px;
+}
+
+#formulario_pesquisa label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+#formulario_pesquisa {
+  position: absolute;
+  top: 20px;
+  right: 250px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#botao-pesquisa {
+  padding: 5px 8px;
+}
+
+#botao-pesquisa i {
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+#output {
+  margin-top: 1em;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  min-height: 2em;
+  transition: background 0.2s;
+}
+
+.highlight {
+  background-color: yellow;
+}
+.titulo_secao {
+  background: #a9a6a6ce;
+  padding: 10px;
+  border-radius: 5px;
+  color: blue;
+  font-style: oblique;
+}
+
+.sobre-texto {
+  text-align: justify;
+  color: black;
+}
+
+.sobre-texto:hover {
+  color: red;
+}
+
+.redes-sociais i {
+  font-size: 50px;
+}
+aside {
+  background: #f1be2f;
+  padding: 15px;
+  border-left: 5px solid #1565c0;
+  margin-top: 20px;
+}
+
+footer {
+  background: #f1be2f;
+  color: rgba(39, 1, 1, 0.774);
+  text-align: center;
+  padding: 20px;
+}
+.fancy-list {
+  margin: 0;
+  padding: 0;
+}
+
+.fancy-list dt {
+  background: #f1be2f;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgba(39, 1, 1, 0.774);
+}
+
+.fancy-list dd {
+  margin: 0 0 15px 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #1565c0;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+
+  border: 4px solid #f1be2f;
+  border-radius: 12px;
+
+  padding: 5px;
+  background: white;
+
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+.lista-pastelaria {
+  list-style-type: circle;
+  padding-left: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lista-pastelaria li {
+  margin-bottom: 15px;
+}
+.video-liurame {
+  width: 80%;
+  max-width: 800px;
+  display: block;
+  margin: 20px auto;
+  border: 4px solid #f1be2f;
+  border-radius: 12px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}

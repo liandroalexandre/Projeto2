@@ -2,8 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0ef;
 }
-
+.titulo-principal {
+  color: rgba(39, 1, 1, 0.774);
+  text-align: center;
+}
 header {
   background-color: #f1be2f;
   color: white;
@@ -15,15 +19,11 @@ header {
 header h1 {
   margin: 0;
 }
-body {
-  margin: 0;
-  background-color: #f0f0ef; /* Cor das barras laterais */
-}
 
 main {
   width: 90%;
   margin: 0 auto;
-  background-color: #ace9ee90; /* Fundo do conteúdo */
+  background-color: #ace9ee90;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -155,7 +155,10 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-
+.fechado {
+  color: red;
+  font-weight: bold;
+}
 #botao-pesquisa {
   padding: 5px 8px;
 }
@@ -178,13 +181,6 @@ button:hover {
 .highlight {
   background-color: yellow;
 }
-.titulo_secao {
-  background: #a9a6a6ce;
-  padding: 10px;
-  border-radius: 5px;
-  color: blue;
-  font-style: oblique;
-}
 
 .sobre-texto {
   text-align: justify;
@@ -198,6 +194,20 @@ button:hover {
 .redes-sociais i {
   font-size: 50px;
 }
+.redes-sociais a {
+  text-decoration: none;
+}
+.instagram {
+  color: #fa1010;
+}
+
+.facebook {
+  color: rgb(25, 13, 239);
+}
+.whatsapp {
+  color: rgb(5, 181, 5);
+}
+
 aside {
   background: #f1be2f;
   padding: 15px;
@@ -262,7 +272,7 @@ footer {
 }
 .lista-pastelaria {
   list-style-type: circle;
-  padding-left: 30px;
+  padding-left: 35px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -271,13 +281,14 @@ footer {
   margin-bottom: 15px;
 }
 .video-liurame {
-  width: 80%;
+  width: 100%;
   max-width: 800px;
   display: block;
   margin: 20px auto;
   border: 4px solid #f1be2f;
   border-radius: 12px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  height: auto;
 }
 
 dl.fancy-list {
@@ -311,4 +322,71 @@ dl.fancy-list dd {
   width: 100%;
   height: 450px;
   border: 0;
+}
+.titulo-categoria {
+  background: #a9a6a6ce;
+  padding: 10px;
+  border-radius: 5px;
+  color: blue;
+  font-size: 40px;
+  font-style: oblique;
+  margin-bottom: 15px;
+}
+ul {
+  padding-left: 35px;
+}
+#BOLOS h2,
+#CONFEITARIA h2,
+#PASTELARIA h2 {
+  margin-left: 0;
+  padding-left: 10px; /* ou 15px, conforme o aspeto que preferires */
+}
+.liuraroda {
+  font-weight: bold;
+  color: rgb(47, 0, 255);
+}
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+  .galeria {
+    flex-direction: column;
+  }
+
+  .galeria img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .titulo-categoria {
+    font-size: 28px;
+    text-align: center;
+  }
+  #formulario_idioma,
+  #formulario_pesquisa {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .mapa-container iframe {
+    height: 300px;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }

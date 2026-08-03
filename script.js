@@ -8,12 +8,13 @@ function mostrarGaleria(id) {
     }
 }
 
-document.getElementById('formulario').addEventListener('input', function () {
-    var form = event.target.form;
-    var submitBtn = document.getElementById('submit-btn');
+const form = document.getElementById('formulario_contacto');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
     if (form.checkValidity()) {
-        submitBtn.disabled = false;
-    } else {
-        submitBtn.disabled = true;
+        alert("Mensagem enviada com sucesso!");
+        form.reset();
     }
 });

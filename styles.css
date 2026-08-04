@@ -24,7 +24,7 @@ body {
 header {
   background-color: #f1be2f;
   color: white;
-  padding: 5px 10px;
+  padding: 10px;
   text-align: center;
   position: relative;
   width: 100%;
@@ -36,11 +36,10 @@ header h1 {
 }
 
 main {
-  width: 95%;
-  max-width: 1200px;
+  width: min(95%, 1200px);
   margin: 0 auto;
-  background-color: #ace9ee90;
   padding: 20px;
+  background-color: #ace9ee90;
   box-sizing: border-box;
 }
 
@@ -57,7 +56,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 5px 10px;
+  margin: 3px 8px;
 }
 
 nav ul li a {
@@ -92,24 +91,27 @@ ul.fancy-list li {
   position: relative;
 }
 
-table {
-  width: 35%;
+.horario {
+  width: 100%;
   border-collapse: collapse;
 }
 
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
+.horario {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
 }
 
-th {
-  background-color: #f2f2f2;
+.horario th,
+.horario td {
+  border: 1px solid #ddd;
+  padding: 12px;
   text-align: center;
 }
 
-td {
-  text-align: left;
+.horario th {
+  background: #f2f2f2;
 }
 
 #formulario_contacto {
@@ -403,9 +405,6 @@ ul {
     gap: 10px;
   }
 
-  #formulario_pesquisa input {
-    width: 220px;
-  }
   #formulario_idioma,
   #formulario_pesquisa {
     position: static;
@@ -430,15 +429,20 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   nav ul li {
-    margin: 0;
+    margin: 2px;
   }
 
   nav ul li a {
-    font-size: 1.1rem;
+    display: block;
+    padding: 4px 6px;
+    font-size: 1rem;
   }
 
   main {
@@ -446,11 +450,17 @@ ul {
     padding: 10px;
   }
 
-  table {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-  }
+    .horario{
+        width:100%;
+        font-size:14px;
+    }
+
+    .horario th,
+    .horario td{
+        padding:8px;
+    }
+
+}
 
   header h1 {
     font-size: 2rem;

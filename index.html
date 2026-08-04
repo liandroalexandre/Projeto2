@@ -37,27 +37,34 @@
 
   <header>
 
-    <form id="formulario_idioma" action="/submit" method="post">
+    <div class="topo-header">
 
-      <label for="idioma"></label>
+      <div class="idioma-container">
+        <form id="formulario_idioma" action="/submit" method="post">
+          <label for="idioma"></label>
+          <select id="idioma" name="idioma">
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="pt-PT">Português (Portugal)</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
 
-      <select id="idioma" name="idioma">
-        <option value="pt-BR">Português (Brasil)</option>
-        <option value="pt-PT">Português (Portugal)</option>
-        <option value="en">English</option>
-      </select>
+      <div class="pesquisa-container">
+        <form id="formulario_pesquisa" action="/search" method="get">
+          <label for="pesquisa"></label>
 
-    </form>
+          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
+            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
 
-    <form id="formulario_pesquisa" action="/search" method="get">
-      <label for="pesquisa"></label>
-      <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
-        title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
-      <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
+          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
 
+        </form>
+      </div>
+
+    </div>
 
     <div class="logo-container">
       <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
@@ -66,9 +73,11 @@
       </a>
     </div>
 
-
-    <h1 class="titulo-principal">Bem-vindo a Liurame Sabores</h1>
-
+    <div class="titulo-container">
+      <h1 class="titulo-principal">
+        Bem-vindo a Liurame Sabores
+      </h1>
+    </div>
 
     <nav>
       <ul>
@@ -82,8 +91,8 @@
         <li><a href="#FAQ">FAQ</a></li>
       </ul>
     </nav>
-  </header>
 
+  </header>
 
 
   <main>

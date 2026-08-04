@@ -138,10 +138,25 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-#formulario_idioma {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.topo-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.idioma-container,
+.pesquisa-container {
+  display: flex;
+  align-items: center;
+}
+
+#formulario_idioma,
+#formulario_pesquisa {
+  position: static;
+  margin: 0;
 }
 
 #formulario_idioma label {
@@ -160,12 +175,6 @@ select {
   font-weight: bold;
   margin-bottom: 5px;
   text-align: left;
-}
-
-#formulario_pesquisa {
-  position: absolute;
-  top: 20px;
-  right: 250px;
 }
 
 button {
@@ -386,6 +395,16 @@ ul {
   .titulo-categoria {
     font-size: 28px;
     text-align: center;
+  }
+  .topo-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #formulario_pesquisa input {
+    width: 220px;
   }
   #formulario_idioma,
   #formulario_pesquisa {

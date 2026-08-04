@@ -1,14 +1,48 @@
+/* =====================================================
+   ESTILOS GERAIS
+===================================================== */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0ef;
 }
-.titulo-principal {
-  color: rgba(39, 1, 1, 0.774);
-  text-align: center;
+
+main {
+  width: min(95%, 1200px);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ace9ee90;
+  box-sizing: border-box;
+}
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
+/* =====================================================
+   CABEÇALHO (HEADER)
+===================================================== */
+header {
+  background-color: #f1be2f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.topo-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
 .logo-container {
   text-align: center;
   margin: 10px 0;
@@ -21,27 +55,15 @@ body {
   display: block;
   margin: 0 auto;
 }
-header {
-  background-color: #f1be2f;
-  color: white;
-  padding: 10px;
+
+.titulo-principal {
+  color: rgba(39, 1, 1, 0.774);
   text-align: center;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-header h1 {
-  margin: 0;
-}
-
-main {
-  width: min(95%, 1200px);
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ace9ee90;
-  box-sizing: border-box;
-}
+/* =====================================================
+   NAVEGAÇÃO
+===================================================== */
 
 nav {
   width: 100%;
@@ -77,25 +99,124 @@ section {
   border-radius: 8px;
 }
 
-ul.fancy-list {
-  list-style-type: none;
-  padding: 0;
+/* =====================================================
+   FORMULÁRIOS
+===================================================== */
+#formulario_contacto {
+  max-width: 600px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#formulario_idioma,
+#formulario_pesquisa {
+  position: static;
   margin: 0;
 }
+.idioma-container,
+.pesquisa-container {
+  display: flex;
+  align-items: center;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
-ul.fancy-list li {
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Estado de foco dos campos */
+input:focus,
+textarea:focus {
+  background-color: yellow;
+}
+
+#formulario_idioma select {
+  width: 220px;
+  padding: 5px;
+}
+
+#formulario_idioma label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+#formulario_pesquisa label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+#botao-pesquisa {
+  padding: 5px 8px;
+}
+#botao-pesquisa i {
+  font-size: 12px;
+}
+
+/* =====================================================
+   6. CONTEÚDO DAS SECÇÕES
+===================================================== */
+.titulo-categoria {
   background: #a9a6a6ce;
-  margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  position: relative;
+  color: blue;
+  font-size: 40px;
+  font-style: oblique;
+  margin-bottom: 15px;
 }
 
-.horario {
-  width: 100%;
-  border-collapse: collapse;
+.sobre-texto {
+  text-align: justify;
+  color: black;
 }
 
+.sobre-texto:hover {
+  color: red;
+}
+#BOLOS h2,
+#CONFEITARIA h2,
+#PASTELARIA h2 {
+  margin-left: 0;
+  padding-left: 10px; /* ou 15px, conforme o aspeto que preferires */
+}
+
+/* =====================================================
+   TABELA DE HORÁRIOS
+===================================================== */
 .horario {
   width: 70%;
   margin: 20px auto;
@@ -114,150 +235,30 @@ ul.fancy-list li {
   background: #f2f2f2;
 }
 
-#formulario_contacto {
-  max-width: 600px;
-  margin: 0;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="file"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.topo-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 15px;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-
-.idioma-container,
-.pesquisa-container {
-  display: flex;
-  align-items: center;
-}
-
-#formulario_idioma,
-#formulario_pesquisa {
-  position: static;
-  margin: 0;
-}
-
-#formulario_idioma label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
-}
-#formulario_idioma select {
-  width: 220px;
-  padding: 8px;
-}
-
-#formulario_pesquisa label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 .fechado {
   color: red;
   font-weight: bold;
 }
-#botao-pesquisa {
-  padding: 5px 8px;
+
+/* =====================================================
+   LISTAS
+===================================================== */
+ul {
+  padding-left: 35px;
 }
 
-#botao-pesquisa i {
-  font-size: 12px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-#output {
-  margin-top: 1em;
-  padding: 0.5em;
-  border: 1px solid #cccccc;
-  min-height: 2em;
-  transition: background 0.2s;
-}
-
-.highlight {
-  background-color: yellow;
-}
-
-.sobre-texto {
-  text-align: justify;
-  color: black;
-}
-
-.sobre-texto:hover {
-  color: red;
-}
-
-.redes-sociais i {
-  font-size: 50px;
-}
-.redes-sociais a {
-  text-decoration: none;
-}
-.instagram {
-  color: #fa1010;
-}
-
-.facebook {
-  color: rgb(25, 13, 239);
-}
-.whatsapp {
-  color: rgb(5, 181, 5);
-}
-
-aside {
-  background: #f1be2f;
-  padding: 15px;
-  border-left: 5px solid #1565c0;
-  margin-top: 20px;
-}
-
-footer {
-  background: #f1be2f;
-  color: rgba(39, 1, 1, 0.774);
-  text-align: center;
-  padding: 20px;
-}
 .fancy-list {
   margin: 0;
   padding: 0;
 }
 
+.fancy-list li {
+  background: #a9a6a6ce;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
 .fancy-list dt {
   background: #f1be2f;
   padding: 10px;
@@ -273,6 +274,36 @@ footer {
   background-color: #f9f9f9;
   border-left: 4px solid #1565c0;
 }
+
+dl.fancy-list {
+  font-family: "Georgia", serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+dl.fancy-list dt {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+dl.fancy-list dd {
+  margin-left: 20px;
+  color: #666;
+}
+.lista-pastelaria {
+  list-style-type: circle;
+  padding-left: 35px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lista-pastelaria li {
+  margin-bottom: 15px;
+}
+/* =====================================================
+   GALERIA
+===================================================== */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -302,16 +333,9 @@ footer {
 .galeria img:hover {
   transform: scale(1.05);
 }
-.lista-pastelaria {
-  list-style-type: circle;
-  padding-left: 35px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.lista-pastelaria li {
-  margin-bottom: 15px;
-}
+/* =====================================================
+   VÍDEO E MAPA
+===================================================== */
 .video-liurame {
   width: 100%;
   max-width: 800px;
@@ -323,23 +347,6 @@ footer {
   height: auto;
 }
 
-dl.fancy-list {
-  font-family: "Georgia", serif;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-dl.fancy-list dt {
-  font-weight: bold;
-  color: #333;
-  margin-top: 10px;
-}
-
-dl.fancy-list dd {
-  margin-left: 20px;
-  color: #666;
-}
 .mapa-container {
   width: 100%;
   max-width: 800px;
@@ -355,33 +362,76 @@ dl.fancy-list dd {
   height: 450px;
   border: 0;
 }
-.titulo-categoria {
-  background: #a9a6a6ce;
-  padding: 10px;
-  border-radius: 5px;
-  color: blue;
-  font-size: 40px;
-  font-style: oblique;
-  margin-bottom: 15px;
+
+/* =====================================================
+   REDES SOCIAIS
+===================================================== */
+.redes-sociais i {
+  font-size: 50px;
 }
-ul {
-  padding-left: 35px;
+.redes-sociais a {
+  text-decoration: none;
 }
-#BOLOS h2,
-#CONFEITARIA h2,
-#PASTELARIA h2 {
-  margin-left: 0;
-  padding-left: 10px; /* ou 15px, conforme o aspeto que preferires */
+.instagram {
+  color: #fa1010;
+}
+
+.facebook {
+  color: rgb(25, 13, 239);
+}
+.whatsapp {
+  color: rgb(5, 181, 5);
+}
+
+/* =====================================================
+   12. PESQUISA
+===================================================== */
+#output {
+  margin-top: 1em;
+  padding: 0.5em;
+  border: 1px solid #cccccc;
+  min-height: 2em;
+  transition: background 0.2s;
+}
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+aside {
+  background: #f1be2f;
+  padding: 15px;
+  border-left: 5px solid #1565c0;
+  margin-top: 20px;
+}
+
+footer {
+  background: #f1be2f;
+  color: rgba(39, 1, 1, 0.774);
+  text-align: center;
+  padding: 20px;
 }
 .liuraroda {
   font-weight: bold;
   color: rgb(47, 0, 255);
 }
 
+/* =====================================================
+   RESPONSIVIDADE - TABLETS E SMARTPHONES
+===================================================== */
+
+/* ---------- Header ---------- */
 @media (max-width: 768px) {
   header {
     padding: 10px;
   }
+  .topo-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
   .logo {
     width: 150px;
     max-width: 100%;
@@ -394,16 +444,13 @@ ul {
     font-size: 2rem;
     line-height: 1.2;
   }
-  .titulo-categoria {
-    font-size: 28px;
-    text-align: center;
+  header h1 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    line-height: 1.2;
   }
-  .topo-header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+
+  /* ---------- Formulários ---------- */
 
   #formulario_idioma,
   #formulario_pesquisa {
@@ -435,6 +482,8 @@ ul {
     box-sizing: border-box;
   }
 
+  /* ---------- Navegação ---------- */
+
   nav ul li {
     margin: 2px;
   }
@@ -445,48 +494,57 @@ ul {
     font-size: 1rem;
   }
 
+  /* ---------- Conteúdo ---------- */
+
   main {
     width: 100%;
     padding: 10px;
   }
+  .titulo-categoria {
+    font-size: 28px;
+    text-align: center;
+  }
 
-    .horario{
-        width:100%;
-        font-size:14px;
-    }
+  /* ---------- Tabela ---------- */
 
-    .horario th,
-    .horario td{
-        padding:8px;
-    }
+  .horario {
+    width: 100%;
+    font-size: 14px;
+  }
 
-}
-
-  header h1 {
-    font-size: 2rem;
-    margin: 10px 0 20px;
-    line-height: 1.2;
+  .horario th,
+  .horario td {
+    padding: 8px;
   }
 
   .galeria {
     flex-direction: column;
   }
 
+  /* ---------- Galeria ---------- */
+
   .galeria img {
     width: 100%;
     max-width: 350px;
     height: auto;
   }
+  /* ---------- Vídeo e mapa ---------- */
   .video-liurame,
   .mapa-container {
     width: 100%;
   }
+
+  /* ---------- Geral ---------- */
 
   html,
   body {
     overflow-x: hidden;
   }
 }
+
+/* =====================================================
+     RESPONSIVIDADE - LANDSCAPE
+ ===================================================== */
 
 @media (max-width: 768px) and (orientation: landscape) {
   .logo {

@@ -1044,7 +1044,7 @@ footer {
 .imagem-sobre {
   width: 400px;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   margin: 0 auto 20px;
   border: 4px solid #f1be2f;

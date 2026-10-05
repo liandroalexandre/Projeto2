@@ -8,7 +8,9 @@ body {
   padding: 0;
   background-color: #f0f0ef;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 main {
   width: min(95%, 1200px);
   margin: 0 auto;
@@ -22,7 +24,37 @@ section {
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-
+#sobre > article {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+#sobre > article p,
+#sobre > section p {
+  max-width: 900px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #3f3f3f;
+  text-align: left;
+}
+#sobre > article h3,
+#sobre > section > h3 {
+  color: #5a3a1a;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 10px 0 15px;
+  font-style: italic;
+}
+#sobre > section ul {
+  max-width: 700px;
+  margin: 10px auto;
+  padding-left: 25px;
+  line-height: 1.8;
+  color: #3f3f3f;
+  font-size: 1.05rem;
+}
 /* =====================================================
    CABEÇALHO (HEADER)
 ===================================================== */
@@ -34,6 +66,14 @@ header {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+}
+#sobre > section article p {
+  max-width: 900px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #3f3f3f;
+  text-align: justify;
 }
 .topo-header {
   display: flex;
@@ -91,13 +131,18 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-
+nav ul li a.ativo {
+  background-color: #f1be2f;
+  color: #3c08e8;
+  font-weight: bold;
+  border-radius: 5px;
+}
 /* =====================================================
    FORMULÁRIOS
 ===================================================== */
 #formulario_contacto {
   max-width: 600px;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -114,6 +159,7 @@ nav ul li a:hover {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 #formulario_contacto label {
@@ -189,7 +235,20 @@ button:hover {
 #botao-pesquisa i {
   font-size: 12px;
 }
+.botao-home {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #f1be2f;
+  color: #3c08e8;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
+.botao-home:hover {
+  text-decoration: underline;
+}
 /* =====================================================
    6. CONTEÚDO DAS SECÇÕES
 ===================================================== */
@@ -203,16 +262,99 @@ button:hover {
   margin-bottom: 15px;
   margin-left: 0;
 }
+.frase-home {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 10px auto 25px;
+  color: #5a3a1a;
+}
+.apresentacao-home {
+  position: relative;
+  text-align: center;
+  padding: 35px 60px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.apresentacao-home::before,
+.apresentacao-home::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #f1be2f;
+  border-radius: 50%;
+  opacity: 0.8;
+}
 
+.apresentacao-home::before {
+  left: -25px;
+  top: 20px;
+  box-shadow:
+    45px 45px 0 8px #4b2412,
+    20px 70px 0 -5px #f1be2f,
+    65px 10px 0 -15px #4b2412;
+}
+
+.apresentacao-home::after {
+  right: -25px;
+  bottom: 20px;
+  box-shadow:
+    -45px -45px 0 8px #4b2412,
+    -20px -70px 0 -5px #f1be2f,
+    -65px -10px 0 -15px #4b2412;
+}
+.apresentacao-home h2 {
+  font-size: 2rem;
+  color: #5a3a1a;
+  margin-bottom: 10px;
+}
+
+.apresentacao-home p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#SOBRE_NOS,
+#LOCALIZACAO,
+#CONTACTOS {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+}
+#SOBRE_NOS .sobre-texto,
+#LOCALIZACAO .sobre-texto,
+#CONTACTOS .sobre-texto {
+  text-align: center;
+  line-height: 1.6;
+}
+#SOBRE_NOS .titulo-categoria,
+#LOCALIZACAO .titulo-categoria,
+#CONTACTOS .titulo-categoria {
+  margin-top: 0;
+}
 .sobre-texto {
   text-align: justify;
   color: black;
 }
-
+.frase-caixa {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 10px auto 25px;
+  color: #5a3a1a;
+}
 .sobre-texto:hover {
   color: red;
 }
-
+.bolos-home .descricao-bolo {
+  font-style: italic;
+  color: #5a3a1a;
+  margin: 10px 0;
+}
 /* =====================================================
    TABELA DE HORÁRIOS
 ===================================================== */
@@ -238,7 +380,30 @@ button:hover {
   color: red;
   font-weight: bold;
 }
+.tabela-servicos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
+.tabela-servicos th,
+.tabela-servicos td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabela-servicos th {
+  background-color: #f1be2f;
+  font-weight: bold;
+}
+.tabela-servicos tbody tr:hover td {
+  background-color: #fff8dc;
+}
+
+.tabela-servicos td {
+  background-color: white;
+}
 /* =====================================================
    LISTAS
 ===================================================== */
@@ -300,6 +465,62 @@ dl.fancy-list dd {
 .lista-pastelaria li {
   margin-bottom: 15px;
 }
+.lista-servicos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.lista-servicos li {
+  background: white;
+  padding: 18px;
+  border-left: 5px solid #f1be2f;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5a3a1a;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.12);
+}
+.passos-encomenda {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  counter-reset: passo;
+}
+
+.passos-encomenda li {
+  counter-increment: passo;
+  background: #f9f9f9;
+  padding: 18px 18px 18px 55px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+  font-size: 1.05rem;
+  color: #5a3a1a;
+}
+
+.passos-encomenda li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f1be2f;
+  color: #3c08e8;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* =====================================================
    GALERIA
 ===================================================== */
@@ -331,6 +552,164 @@ dl.fancy-list dd {
 
 .galeria img:hover {
   transform: scale(1.05);
+}
+/* Galeria da página Serviços */
+
+.pastelaria-servico .galeria {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.pastelaria-servico .galeria img {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+.pastelaria-servico .galeria img {
+  border: 4px solid #f1be2f;
+  border-radius: 12px;
+  padding: 5px;
+  background: white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+.pastelaria-servico .categoria-pastelaria h3 {
+  font-size: 28px;
+  color: #5a3a1a;
+  margin-bottom: 15px;
+}
+.pastelaria-servico .categoria-pastelaria {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+.pastelaria-servico .categoria-pastelaria:last-child {
+  border-bottom: none;
+}
+.pastelaria-servico .galeria img:hover {
+  transform: scale(1.03);
+}
+
+.categorias-pastelaria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.categoria-pastelaria {
+  width: 100%;
+  text-align: center;
+}
+#PASTELARIA .categoria-pastelaria h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #5a3a1a;
+}
+.pastelaria-home .categoria-pastelaria h3 {
+  font-size: 1.5rem;
+  color: #5a3a1a;
+  margin-bottom: 15px;
+}
+.pastelaria-home .categoria-pastelaria h3 {
+  font-size: 1.5rem;
+  color: #5a3a1a;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.categoria-pastelaria h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.categoria-pastelaria > a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.categorias-bolos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.categoria-bolo {
+  width: 30%;
+  text-align: center;
+}
+#BOLOS .categoria-bolo h3 {
+  font-size: 1.5rem;
+  color: #5a3a1a;
+  margin: 10px 0 15px;
+  font-weight: bold;
+}
+.categoria-bolo img {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+  border: 4px solid #f1be2f;
+  border-radius: 12px;
+  padding: 5px;
+  background: white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.bolos-home .categoria-bolo img {
+  border-radius: 12px;
+}
+.bolos-home .categoria-bolo img:hover {
+  transform: scale(1.03);
+}
+.categoria-bolo img:hover {
+  transform: scale(1.05);
+}
+.bolos-home .categoria-bolo {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.bolos-home .categoria-bolo h3 {
+  font-size: 1.4rem;
+  color: #5a3a1a;
+  margin-bottom: 10px;
+}
+.bolos-home .ver-inspiracoes {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #f1be2f;
+  color: #3c08e8;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.categoria-galeria {
+  width: 100%;
+  text-align: center;
+}
+.bolos-home .ver-inspiracoes:hover {
+  text-decoration: underline;
+}
+.categoria-galeria h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.categoria-galeria {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.categoria-galeria:last-child {
+  border-bottom: none;
 }
 /* =====================================================
    VÍDEO E MAPA
@@ -405,16 +784,71 @@ aside {
 }
 
 footer {
-  background: #f1be2f;
+  background-color: #f1be2f;
   color: rgba(39, 1, 1, 0.774);
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
+
+  bottom: 0;
+  width: 100%;
 }
 .liuraroda {
   font-weight: bold;
   color: rgb(47, 0, 255);
 }
+.pastelaria-home .galeria img {
+  width: 280px;
+  height: 360px;
+}
 
+.pastelaria-servico .ver-album {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.pastelaria-servico .ver-album a:hover {
+  text-decoration: underline;
+}
+.pastelaria-servico .ver-album a {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #3c08e8;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #3c08e8;
+}
+.membro-equipa h4 {
+  margin: 12px 0 5px;
+  color: #5a3a1a;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.membro-equipa p {
+  margin: 0 auto;
+  color: #666;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 220px;
+  text-align: center;
+}
+#equipa .membro-equipa p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 220px;
+}
+#sobre > section ul li {
+  display: inline-block;
+  background-color: white;
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #f1be2f;
+  color: #5a3a1a;
+  font-weight: bold;
+}
 /* =====================================================
    RESPONSIVIDADE - TABLETS E SMARTPHONES
 ===================================================== */
@@ -468,6 +902,11 @@ footer {
   .mapa-container iframe {
     height: 300px;
   }
+  #formulario_contacto {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
   nav ul {
     display: flex;
@@ -502,6 +941,17 @@ footer {
     text-align: center;
   }
 
+  .categorias-bolos {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .categoria-bolo {
+    width: 90%;
+    max-width: 350px;
+  }
+
   /* ---------- Tabela ---------- */
 
   .horario {
@@ -525,6 +975,20 @@ footer {
     max-width: 350px;
     height: auto;
   }
+
+  .pastelaria-servico .galeria {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pastelaria-servico .galeria img {
+    width: 100%;
+    max-width: 350px;
+    min-width: 0;
+    height: auto;
+    box-sizing: border-box;
+  }
   /* ---------- Vídeo e mapa ---------- */
   .video-liurame,
   .mapa-container {
@@ -537,8 +1001,15 @@ footer {
   body {
     overflow-x: hidden;
   }
-}
 
+  .equipa {
+    grid-template-columns: 1fr;
+  }
+  .lista-servicos,
+  .passos-encomenda {
+    grid-template-columns: 1fr;
+  }
+}
 /* =====================================================
      RESPONSIVIDADE - LANDSCAPE
  ===================================================== */
@@ -566,4 +1037,53 @@ footer {
   nav ul li a {
     font-size: 1rem;
   }
+}
+
+/* IMAGEM DA PÁGINA SOBRE */
+
+.imagem-sobre {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border: 4px solid #f1be2f;
+  transition: transform 0.5s;
+}
+
+.imagem-sobre:hover {
+  transform: scale(1.05);
+}
+.membro-equipa img {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.membro-equipa img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+/* IMAGENS DA EQUIPA */
+
+.membro-equipa img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #f1be2f;
+  border-radius: 50%;
+}
+
+/* GRELHA DA EQUIPA */
+
+.equipa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+/* CONTEÚDO DOS MEMBROS */
+
+.membro-equipa {
+  text-align: center;
 }

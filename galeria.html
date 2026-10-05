@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="description" content=" LIURAME SABORES: DELÍCIAS E SABORES A CADA PEDAÇO">
+
+  <meta name="author" content=" Liandro Alexandre">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="max-image-preview:large">
+
+
+
+  <meta property="og:title" content="LIURAME Sabores">
+  <meta property="og:url" content="imagens/LOGOLIURAME.png">
+
+  <meta property="og:description" content="Descubra sabores incríveis.">
+  <meta property="og:image" content="imagens/LOGOLIURAME.png">
+
+
+  <title> LIURAME SABORES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="topo-header">
+
+      <div class="idioma-container">
+        <form id="formulario_idioma" action="/submit" method="post">
+          <label for="idioma"></label>
+          <select id="idioma" name="idioma">
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="pt-PT">Português (Portugal)</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="pesquisa-container">
+        <form id="formulario_pesquisa" action="/search" method="get">
+          <label for="pesquisa"></label>
+
+          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
+            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
+
+          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="logo-container">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
+        title="Ir para a página inicial da LIURAME SABORES">
+        <img src="imagens/LOGOLIURAME.png" class="logo" alt="Logotipo da Liurame Sabores">
+      </a>
+    </div>
+
+    <div class="titulo-container">
+      <h1 class="titulo-principal">
+        Bem-vindo a Liurame Sabores
+      </h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE NÓS</a></li>
+        <li><a href="servicos.html">SERVIÇOS</a></li>
+        <li><a href="galeria.html" class="ativo">GALERIA</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <section>
+
+      <h3>Assiste ao vídeo institucional da Liurame Sabores</h3>
+
+
+      <video controls autoplay muted class="video-liurame">
+        <source src="videos/mvv.mp4" type="video/mp4">
+        O seu navegador não suporta o elemento de vídeo.
+
+      </video>
+    </section>
+
+    <section>
+
+      <h2 class="titulo-categoria">Álbuns da Galeria</h2>
+
+      <div class="categoria-galeria" id="aniversarios">
+
+        <h3>Aniversários</h3>
+
+        <div class="galeria">
+          <img src="imagens/aniversarios/aniv1.png" alt="Bolo de aniversário">
+          <img src="imagens/aniversarios/aniv2.webp" alt="Bolo de aniversário">
+          <img src="imagens/aniversarios/aniv3.png" alt="Bolo de aniversário">
+          <img src="imagens/aniversarios/aniv4.png" alt="Bolo de aniversário">
+          <img src="imagens/aniversarios/aniv5.png" alt="Bolo de aniversário">
+        </div>
+
+
+
+      </div>
+      <div class="categoria-galeria" id="celebracoes">
+
+        <h3>Celebrações</h3>
+
+        <div class="galeria">
+          <img src="imagens/celebracoes/celebra1.jpg" alt="Bolo de celebração">
+          <img src="imagens/celebracoes/celebra2.jpg" alt="Bolo de celebração">
+          <img src="imagens/celebracoes/celebra3.jpg" alt="Bolo de celebração">
+          <img src="imagens/celebracoes/celebra4.jpg" alt="Bolo de celebração">
+        </div>
+
+      </div>
+
+      <div class="categoria-galeria" id="sobremesas">
+
+        <h3>Sobremesas</h3>
+
+        <div class="galeria">
+          <img src="imagens/sobremesas/sobrem1.jpg" alt="Sobremesa">
+          <img src="imagens/sobremesas/sobrem2.jpg" alt="Sobremesa">
+          <img src="imagens/sobremesas/sobrem3.jpg" alt="Sobremesa">
+          <img src="imagens/sobremesas/sobrem4.jpg" alt="Sobremesa">
+          <img src="imagens/sobremesas/sobrem5.jpg" alt="Sobremesa">
+        </div>
+
+      </div>
+      <div class="categoria-galeria" id="doces">
+
+        <h3>Doces</h3>
+
+        <div class="galeria">
+          <img src="imagens/doces/doces1.jpg" alt="Doce">
+          <img src="imagens/doces/doces2.jpg" alt="Doce">
+          <img src="imagens/doces/doces3.jpg" alt="Doce">
+          <img src="imagens/doces/doces4.jpg" alt="Doce">
+        </div>
+
+      </div>
+
+      <div class="categoria-galeria" id="salgados">
+
+        <h3>Salgados</h3>
+
+        <div class="galeria">
+          <img src="imagens/salgados/salga1.jpg" alt="Salgado">
+          <img src="imagens/salgados/salga2.jpg" alt="Salgado">
+          <img src="imagens/salgados/salga3.jpg" alt="Salgado">
+          <img src="imagens/salgados/salga4.jpg" alt="Salgado">
+          <img src="imagens/salgados/salga5.jpg" alt="Salgado">
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+
+  <footer>
+
+    <p class="liuraroda">
+
+      <strong>LIURAME SABORES</strong>
+    </p>
+
+
+
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" aria-label="Instagram"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook-f facebook"></i>
+      </a>
+
+      <a href="https://wa.me/351937774281" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp whatsapp"></i>
+      </a>
+    </div>
+    <P>Email: comercial.liurame@gmail.com</p>
+    <P>Telefone: 937 774 281</p>
+
+    <p>© 2026 Copyright LIURAME SABORES. <a href="documentos/Politica-Privacidade.pdf">TERMOS DE USO |
+        POLÍTICA DE PRIVACIDADE | CONFIGURAÇÕES DE PRIVACIDADE</a></p>
+
+
+
+
+  </footer>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="description" content=" LIURAME SABORES: DELÍCIAS E SABORES A CADA PEDAÇO">
+
+  <meta name="author" content=" Liandro Alexandre">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="max-image-preview:large">
+
+
+
+  <meta property="og:title" content="LIURAME Sabores">
+  <meta property="og:url" content="imagens/LOGOLIURAME.png">
+
+  <meta property="og:description" content="Descubra sabores incríveis.">
+  <meta property="og:image" content="imagens/LOGOLIURAME.png">
+
+
+  <title> LIURAME SABORES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="topo-header">
+
+      <div class="idioma-container">
+        <form id="formulario_idioma" action="/submit" method="post">
+          <label for="idioma"></label>
+          <select id="idioma" name="idioma">
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="pt-PT">Português (Portugal)</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="pesquisa-container">
+        <form id="formulario_pesquisa" action="/search" method="get">
+          <label for="pesquisa"></label>
+
+          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
+            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
+
+          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="logo-container">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
+        title="Ir para a página inicial da LIURAME SABORES">
+        <img src="imagens/LOGOLIURAME.png" class="logo" alt="Logotipo da Liurame Sabores">
+      </a>
+    </div>
+
+    <div class="titulo-container">
+      <h1 class="titulo-principal">
+        Bem-vindo a Liurame Sabores
+      </h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE NÓS</a></li>
+        <li><a href="servicos.html" class="ativo">SERVIÇOS</a></li>
+        <li><a href="galeria.html">GALERIA</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <section id="BOLOS">
+
+      <h2 class="titulo-categoria">BOLOS</h2>
+
+      <div class="categorias-bolos">
+
+        <div class="categoria-bolo">
+          <h3>Aniversários</h3>
+          <img src="imagens/equipa/BOLOSANIVERS.png" alt="Bolo de aniversário">
+          <a href="galeria.html#aniversarios">Ver álbum</a>
+        </div>
+
+        <div class="categoria-bolo">
+          <h3>Celebrações</h3>
+          <img src="imagens/equipa/boloscelebra.png" alt="Bolo para celebrações">
+          <a href="galeria.html#celebracoes">Ver álbum</a>
+
+        </div>
+
+        <div class="categoria-bolo">
+          <h3>Sobremesas</h3>
+          <img src="imagens/equipa/sobremesas.png" alt="Sobremesas">
+          <a href="galeria.html#sobremesas">Ver álbum</a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="SERVICOS">
+
+      <h2 class="titulo-categoria">Os Nossos Serviços</h2>
+
+      <ul class="lista-servicos">
+        <li>Bolos personalizados para aniversários</li>
+        <li>Bolos para celebrações e eventos</li>
+        <li>Sobremesas variadas</li>
+        <li>Doces e salgados de pastelaria</li>
+      </ul>
+      <h3>Como funciona uma encomenda</h3>
+
+      <ol class="passos-encomenda">
+        <li>Escolher o produto pretendido.</li>
+        <li>Indicar a data pretendida.</li>
+        <li>Definir os detalhes e a personalização.</li>
+        <li>Confirmar a encomenda com a nossa equipa.</li>
+      </ol>
+    </section>
+    <section id="PASTELARIA" class="pastelaria-servico">
+
+      <h2 class="titulo-categoria">PASTELARIA</h2>
+
+      <div class="categorias-pastelaria">
+        <div class="categoria-pastelaria">
+
+          <h3>DOCES</h3>
+
+          <div class="galeria">
+            <img src="imagens/equipa/docesa.png" alt="Doces">
+            <img src="imagens/equipa/docesb.png" alt="Doces">
+            <img src="imagens/equipa/docesc.png" alt="Doces">
+          </div>
+
+          <div class="ver-album">
+            <a href="galeria.html#doces">Ver álbum</a>
+          </div>
+
+        </div>
+        <div class="categoria-pastelaria">
+
+          <h3>SALGADOS</h3>
+
+          <div class="galeria">
+            <img src="imagens/equipa/salgadosa.png" alt="Salgados">
+            <img src="imagens/equipa/salgadosb.png" alt="Salgados">
+
+          </div>
+
+          <div class="ver-album">
+            <a href="galeria.html#salgados">Ver álbum</a>
+          </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="PRECOS">
+
+      <h2 class="titulo-categoria">Preços e Duração</h2>
+
+      <table class="tabela-servicos">
+
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Preço a partir de</th>
+            <th>Duração</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Bolos personalizados</td>
+            <td>25 €</td>
+            <td>2 a 3 dias</td>
+          </tr>
+
+          <tr>
+            <td>Bolos para celebrações</td>
+            <td>30 €</td>
+            <td>2 a 4 dias</td>
+          </tr>
+
+          <tr>
+            <td>Sobremesas</td>
+            <td>15 €</td>
+            <td>1 a 2 dias</td>
+          </tr>
+
+          <tr>
+            <td>Doces e salgados</td>
+            <td>10 €</td>
+            <td>1 dia</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </section>
+
+
+  </main>
+
+  <footer>
+
+    <p class="liuraroda">
+
+      <strong>LIURAME SABORES</strong>
+    </p>
+
+
+
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" aria-label="Instagram"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook-f facebook"></i>
+      </a>
+
+      <a href="https://wa.me/351937774281" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp whatsapp"></i>
+      </a>
+    </div>
+    <P>Email: comercial.liurame@gmail.com</p>
+    <P>Telefone: 937 774 281</p>
+
+    <p>© 2026 Copyright LIURAME SABORES. <a href="documentos/Politica-Privacidade.pdf">TERMOS DE USO |
+        POLÍTICA DE PRIVACIDADE | CONFIGURAÇÕES DE PRIVACIDADE</a></p>
+
+
+
+
+  </footer>
+
+
+
+</body>
+
+
+</html>

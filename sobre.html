@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="description" content=" LIURAME SABORES: DELÍCIAS E SABORES A CADA PEDAÇO">
+
+  <meta name="author" content=" Liandro Alexandre">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="max-image-preview:large">
+
+
+
+  <meta property="og:title" content="LIURAME Sabores">
+  <meta property="og:url" content="imagens/LOGOLIURAME.png">
+
+  <meta property="og:description" content="Descubra sabores incríveis.">
+  <meta property="og:image" content="imagens/LOGOLIURAME.png">
+
+
+  <title> LIURAME SABORES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="topo-header">
+
+      <div class="idioma-container">
+        <form id="formulario_idioma" action="/submit" method="post">
+          <label for="idioma"></label>
+          <select id="idioma" name="idioma">
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="pt-PT">Português (Portugal)</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="pesquisa-container">
+        <form id="formulario_pesquisa" action="/search" method="get">
+          <label for="pesquisa"></label>
+
+          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
+            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
+
+          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="logo-container">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
+        title="Ir para a página inicial da LIURAME SABORES">
+        <img src="imagens/LOGOLIURAME.png" class="logo" alt="Logotipo da Liurame Sabores">
+      </a>
+    </div>
+
+    <div class="titulo-container">
+      <h1 class="titulo-principal">
+        Bem-vindo a Liurame Sabores
+      </h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html" class="ativo">SOBRE NÓS</a></li>
+        <li><a href="servicos.html">SERVIÇOS</a></li>
+        <li><a href="galeria.html">GALERIA</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+
+    <section id="sobre">
+      <h2 class="titulo-categoria">Sobre a Liurame Sabores</h2>
+
+      <img src="imagens/equipa/formacaoamelia.jpg" class="imagem-sobre" alt="Formação da Liurame Sabores">
+
+      <article>
+        <h3>História</h3>
+
+        <p>
+          A Liurame Sabores nasceu da paixão pela pastelaria e pelo prazer de criar sabores especiais.
+
+          Inspiramo-nos na tradição portuguesa, combinando receitas de sempre com criatividade e dedicação.
+
+        </p>
+      </article>
+
+      <section>
+        <h3>Missão</h3>
+
+        <p>
+          Criar produtos frescos e de qualidade, preparados com dedicação para tornar cada momento mais especial.
+
+        </p>
+      </section>
+
+      <section>
+        <h3>Visão</h3>
+
+        <p>
+          Ser uma referência na pastelaria e confeitaria, reconhecida pela qualidade, criatividade e satisfação dos
+          nossos clientes.
+
+        </p>
+      </section>
+
+      <section>
+        <h3>Valores</h3>
+
+        <ul>
+          <li>Qualidade</li>
+          <li>Dedicação</li>
+          <li>Inovação</li>
+          <li>Tradição</li>
+          <li>Compromisso com o cliente</li>
+        </ul>
+      </section>
+
+      <section id="equipa">
+        <h3>A Nossa Equipa</h3>
+
+        <p>
+          A nossa equipa trabalha diariamente com dedicação e carinho,
+          procurando garantir a qualidade e a frescura de cada produto.
+        </p>
+
+        <div class="equipa">
+
+          <article class="membro-equipa">
+            <img src="imagens/equipa/liandroeq.png" alt="Liandro Alexandre">
+            <h4>Liandro Alexandre</h4>
+            <p>Responsável pela gestão e organização da Liurame Sabores.</p>
+          </article>
+
+          <article class="membro-equipa">
+            <img src="imagens/equipa/ameliaeq.png" alt="Amélia Alexandre">
+            <h4>Amélia Alexandre</h4>
+            <p>
+              Responsável pela equipa de preparação e decoração dos bolos e doces.
+            </p>
+          </article>
+
+          <article class="membro-equipa">
+            <img src="imagens/equipa/aidaeq.jpg" alt="Aida Jovita">
+            <h4>Aida Jovita</h4>
+            <p>Pasteleira da Liurame Sabores.</p>
+          </article>
+
+          <article class="membro-equipa">
+            <img src="imagens/equipa/maniziaeq.jpg" alt="Manízia Batalha">
+            <h4>Manízia Batalha</h4>
+            <p>Decoradora de bolos e doces da Liurame Sabores.</p>
+          </article>
+
+          <article class="membro-equipa">
+            <img src="imagens/equipa/agostinhoeq.jpg" alt="Agostinho Costa">
+            <h4>Agostinho Costa</h4>
+            <p>Padeiro da Liurame Sabores.</p>
+          </article>
+        </div>
+      </section>
+      <aside>
+        <h3>Curiosidade</h3>
+
+        <p class="sobre-texto">
+          Sabia que o nome <strong>Liurame</strong> resulta da combinação das iniciais dos
+          membros da família fundadora? Esta união simboliza o espírito familiar, a dedicação
+          e o carinho colocados em cada receita, valores que fazem parte da identidade da
+          Liurame Sabores desde o primeiro dia.
+        </p>
+      </aside>
+  </main>
+
+
+
+
+  </main>
+
+  <footer>
+
+    <p class="liuraroda">
+
+      <strong>LIURAME SABORES</strong>
+    </p>
+
+
+
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" aria-label="Instagram"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook-f facebook"></i>
+      </a>
+
+      <a href="https://wa.me/351937774281" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp whatsapp"></i>
+      </a>
+    </div>
+    <P>Email: comercial.liurame@gmail.com</p>
+    <P>Telefone: 937 774 281</p>
+
+    <p>© 2026 Copyright LIURAME SABORES. <a href="documentos/Politica-Privacidade.pdf">TERMOS DE USO |
+        POLÍTICA DE PRIVACIDADE | CONFIGURAÇÕES DE PRIVACIDADE</a></p>
+
+
+
+
+  </footer>
+
+
+
+</body>
+
+
+</html>

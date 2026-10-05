@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="description" content=" LIURAME SABORES: DELÍCIAS E SABORES A CADA PEDAÇO">
+
+  <meta name="author" content=" Liandro Alexandre">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="max-image-preview:large">
+
+
+
+  <meta property="og:title" content="LIURAME Sabores">
+  <meta property="og:url" content="imagens/LOGOLIURAME.png">
+
+  <meta property="og:description" content="Descubra sabores incríveis.">
+  <meta property="og:image" content="imagens/LOGOLIURAME.png">
+
+
+  <title> LIURAME SABORES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="topo-header">
+
+      <div class="idioma-container">
+        <form id="formulario_idioma" action="/submit" method="post">
+          <label for="idioma"></label>
+          <select id="idioma" name="idioma">
+            <option value="pt-BR">Português (Brasil)</option>
+            <option value="pt-PT">Português (Portugal)</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="pesquisa-container">
+        <form id="formulario_pesquisa" action="/search" method="get">
+          <label for="pesquisa"></label>
+
+          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
+            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
+
+          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="logo-container">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
+        title="Ir para a página inicial da LIURAME SABORES">
+        <img src="imagens/LOGOLIURAME.png" class="logo" alt="Logotipo da Liurame Sabores">
+      </a>
+    </div>
+
+    <div class="titulo-container">
+      <h1 class="titulo-principal">
+        Bem-vindo a Liurame Sabores
+      </h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE NÓS</a></li>
+        <li><a href="servicos.html">SERVIÇOS</a></li>
+        <li><a href="galeria.html">GALERIA</a></li>
+        <li><a href="contacto.html" class="ativo">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+
+    <section id="LOCALIZACAO">
+
+
+      <h2 class="titulo-categoria"><i>LOCALIZAÇÃO</i></h2>
+
+
+      <p>
+        <b>" Rua José Teixeira do Couto, 2 Esq. 4580-223, Paredes, Porto-Portugal"</b>
+      </p>
+      <p>Latitude: 41.2098272</p>
+      <p>Longitude: -8.3360162</p>
+
+      <div class="mapa-container">
+        <iframe src="https://www.google.com/maps?q=41.2098272,-8.3360162&output=embed"
+          title="Mapa com a localização da Liurame Sabores" loading="lazy" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+
+    <section id="CONTACTOS">
+
+
+      <h2 class="titulo-categoria"><i>Contacte-nos</i></h2>
+
+
+      <form id="formulario_contacto" action="/submit-contacto" method="post">
+
+
+        <label for="assunto">Assunto:</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione um assunto </option>
+          <option value="1">Apoio ao Cliente</option>
+          <option value="2">Encomenda</option>
+          <option value="3">Pós-venda</option>
+          <option value="4">Recrutamento</option>
+        </select>
+        <p><label for="nome">Nome:</label>
+
+          <input type="text" id="nome" name="nome" required autocomplete="name" maxlength="100"
+            placeholder="Primeiro e Último">
+        </p>
+        <p><label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" autocomplete="email" maxlength="150" required
+            placeholder="Digite o seu e-mail">
+        </p>
+
+        <p>
+          <label for="anexo">Anexo:</label>
+          <i>(opcional — JPG, JPEG, PNG ou PDF)</i>
+          <input type="file" id="anexo" name="anexo" multiple accept=".jpg,.jpeg,.png,.pdf">
+        </p>
+        <p><label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" cols="50" maxlength="1000" required
+            placeholder="Como podemos ajudar?"></textarea>
+        </p>
+
+        <p><input type="checkbox" id="aceito" name="termos" required>
+
+          <label for="aceito"><i>Eu aceito os Termos de Utilização & Política de Privacidade. Por favor
+              leia os termos de <a href="documentos/Politica-Privacidade.pdf">Política de Privacidade e
+                Cookies.</a></i></label>
+        </p>
+
+        <button type="submit" id="submit-btn">Enviar</button>
+
+      </form>
+    </section>
+
+
+
+  </main>
+
+  <footer>
+
+    <p class="liuraroda">
+
+      <strong>LIURAME SABORES</strong>
+    </p>
+
+
+
+    <div class="redes-sociais">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" aria-label="Instagram"
+        target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook-f facebook"></i>
+      </a>
+
+      <a href="https://wa.me/351937774281" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp whatsapp"></i>
+      </a>
+    </div>
+    <P>Email: comercial.liurame@gmail.com</p>
+    <P>Telefone: 937 774 281</p>
+
+    <p>© 2026 Copyright LIURAME SABORES. <a href="documentos/Politica-Privacidade.pdf">TERMOS DE USO |
+        POLÍTICA DE PRIVACIDADE | CONFIGURAÇÕES DE PRIVACIDADE</a></p>
+
+
+
+
+  </footer>
+
+
+
+</body>
+
+
+</html>

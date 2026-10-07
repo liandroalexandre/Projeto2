@@ -630,23 +630,17 @@ dl.fancy-list dd {
   width: 350px;
   height: 450px;
   object-fit: cover;
-
+  box-sizing: border-box;
   border: 4px solid #f1be2f;
   border-radius: 12px;
-
   padding: 5px;
   background: white;
-
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-
   transition: 0.3s;
 }
 
 .galeria img:hover {
   transform: scale(1.03);
-}
-.galeria img {
-  box-sizing: border-box;
 }
 
 .pastelaria-servico .galeria {
@@ -1140,6 +1134,10 @@ footer {
     width: 90%;
     max-width: 350px;
   }
+  .categoria-bolo a {
+    display: inline-block;
+    margin-top: 20px;
+  }
   .categoria-bolo img {
     width: 100%;
     height: auto;
@@ -1178,6 +1176,10 @@ footer {
     min-width: 0;
     height: auto;
     box-sizing: border-box;
+  }
+  .pastelaria-servico .ver-album a {
+    display: inline-block;
+    margin-top: 20px;
   }
   .imagem-sobre {
     width: 100%;
@@ -1254,6 +1256,10 @@ footer {
     align-items: center;
     min-height: 520px;
   }
+  .categoria-bolo a {
+    display: inline-block;
+    margin-top: 20px;
+  }
 
   .categoria-bolo img {
     width: 100%;
@@ -1286,9 +1292,5 @@ footer {
     height: 380px;
     object-fit: cover;
     box-sizing: border-box;
-  }
-
-  .galeria img:hover {
-    transform: scale(1.03);
   }
 }

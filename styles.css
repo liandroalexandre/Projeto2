@@ -770,6 +770,10 @@ dl.fancy-list dd {
   box-sizing: border-box;
 }
 
+.categoria-bolo a {
+  display: inline-block;
+  margin-top: 20px;
+}
 .bolos-home .categoria-bolo img:hover {
   transform: scale(1.03);
 }

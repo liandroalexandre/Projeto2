@@ -1,16 +1,17 @@
 /* =====================================================
-   ESTILOS GERAIS
+   ESTILOS GERAIS / ESTRUTURA
 ===================================================== */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0ef;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 main {
   width: min(95%, 1200px);
   margin: 0 auto;
@@ -18,18 +19,21 @@ main {
   background-color: #ace9ee90;
   box-sizing: border-box;
 }
+
 section {
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+
 #sobre > article {
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+
 #sobre > article p,
 #sobre > section p {
   max-width: 900px;
@@ -39,6 +43,7 @@ section {
   color: #3f3f3f;
   text-align: left;
 }
+
 #sobre > article h3,
 #sobre > section > h3 {
   color: #5a3a1a;
@@ -60,14 +65,7 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-#sobre > section article p {
-  max-width: 900px;
-  margin: 0 auto 15px;
-  line-height: 1.7;
-  font-size: 1.05rem;
-  color: #3f3f3f;
-  text-align: justify;
-}
+
 .topo-header {
   display: flex;
   justify-content: flex-end;
@@ -76,6 +74,7 @@ header {
   padding: 10px;
   flex-wrap: wrap;
 }
+
 .logo-container {
   text-align: center;
   margin: 10px 0;
@@ -97,10 +96,10 @@ header {
 /* =====================================================
    NAVEGAÇÃO
 ===================================================== */
-
 nav {
   width: 100%;
 }
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -124,12 +123,14 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
 nav ul li a.ativo {
   background-color: #f1be2f;
   color: #3c08e8;
   font-weight: bold;
   border-radius: 5px;
 }
+
 /* =====================================================
    FORMULÁRIOS
 ===================================================== */
@@ -177,8 +178,6 @@ nav ul li a.ativo {
   align-items: center;
 }
 
-/* Estado de foco dos campos */
-
 input:focus,
 textarea:focus {
   background-color: yellow;
@@ -209,7 +208,6 @@ textarea:focus {
 /* =====================================================
    BOTÕES
 ===================================================== */
-
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -222,12 +220,15 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
 #botao-pesquisa {
   padding: 4px 6px;
 }
+
 #botao-pesquisa i {
   font-size: 12px;
 }
+
 .botao-home {
   display: inline-block;
   margin-top: 10px;
@@ -242,8 +243,9 @@ button:hover {
 .botao-home:hover {
   text-decoration: underline;
 }
+
 /* =====================================================
-   6. CONTEÚDO DAS SECÇÕES
+   CONTEÚDO GERAL E PÁGINAS
 ===================================================== */
 .titulo-categoria {
   background: #a9a6a6ce;
@@ -255,6 +257,7 @@ button:hover {
   margin-bottom: 15px;
   margin-left: 0;
 }
+
 .frase-home {
   text-align: center;
   font-size: 1.3rem;
@@ -262,6 +265,7 @@ button:hover {
   margin: 10px auto 25px;
   color: #5a3a1a;
 }
+
 .apresentacao-home {
   position: relative;
   text-align: center;
@@ -269,6 +273,7 @@ button:hover {
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 .apresentacao-home::before,
 .apresentacao-home::after {
   content: "";
@@ -297,6 +302,7 @@ button:hover {
     -20px -70px 0 -5px #f1be2f,
     -65px -10px 0 -15px #4b2412;
 }
+
 .apresentacao-home h2 {
   font-size: 2rem;
   color: #5a3a1a;
@@ -318,21 +324,25 @@ button:hover {
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
 }
+
 #SOBRE_NOS .sobre-texto,
 #LOCALIZACAO .sobre-texto,
 #CONTACTOS .sobre-texto {
   text-align: center;
   line-height: 1.6;
 }
+
 #SOBRE_NOS .titulo-categoria,
 #LOCALIZACAO .titulo-categoria,
 #CONTACTOS .titulo-categoria {
   margin-top: 0;
 }
+
 .sobre-texto {
   text-align: justify;
   color: black;
 }
+
 .frase-caixa {
   text-align: center;
   font-size: 1.3rem;
@@ -340,20 +350,35 @@ button:hover {
   margin: 10px auto 25px;
   color: #5a3a1a;
 }
+
 .sobre-texto:hover {
   color: red;
 }
+
 .bolos-home .descricao-bolo {
   font-style: italic;
   color: #5a3a1a;
   margin: 10px 0;
 }
+
+#sobre > section article p {
+  max-width: 900px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #3f3f3f;
+  text-align: justify;
+}
+
+/* =====================================================
+   BLOCOS DE HISTÓRIA / MISSÃO / VISÃO / VALORES
+===================================================== */
 .bloco-historia {
   position: relative;
   background-image: url("imagens/fundos/historia.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
   padding: 30px;
   border-radius: 8px;
   overflow: hidden;
@@ -378,14 +403,17 @@ button:hover {
   padding: 12px 16px;
   border-radius: 8px;
 }
+
 .bloco-missao {
   background-image: url("imagens/fundos/missao.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #fff;
   padding: 30px;
   border-radius: 8px;
 }
+
 .bloco-visao {
   background-image: url("imagens/fundos/visao.png");
   background-repeat: no-repeat;
@@ -394,10 +422,12 @@ button:hover {
   padding: 30px;
   border-radius: 8px;
 }
+
 .bloco-visao p {
   color: #000;
   font-weight: 700;
 }
+
 .bloco-valores {
   background-image: url("imagens/fundos/valores.png");
   background-repeat: no-repeat;
@@ -406,12 +436,10 @@ button:hover {
   padding: 30px;
   border-radius: 8px;
 }
+
 /* =====================================================
-  TABELA
-  DE
-  HORÁRIOS
-  =====================================================
-  */
+   TABELAS
+===================================================== */
 .horario {
   width: 70%;
 
@@ -435,6 +463,7 @@ button:hover {
   color: red;
   font-weight: bold;
 }
+
 .tabela-servicos {
   width: 100%;
   border-collapse: collapse;
@@ -452,6 +481,7 @@ button:hover {
   background-color: #f1be2f;
   font-weight: bold;
 }
+
 .tabela-servicos tbody tr:hover td {
   background-color: #fff8dc;
 }
@@ -459,6 +489,7 @@ button:hover {
 .tabela-servicos td {
   background-color: white;
 }
+
 /* =====================================================
    LISTAS
 ===================================================== */
@@ -478,6 +509,7 @@ ul {
   border-radius: 5px;
   position: relative;
 }
+
 .fancy-list dt {
   background: #f1be2f;
   padding: 10px;
@@ -506,10 +538,12 @@ dl.fancy-list dt {
   color: #333;
   margin-top: 10px;
 }
+
 dl.fancy-list dd {
   margin-left: 20px;
   color: #666;
 }
+
 .lista-pastelaria {
   list-style-type: circle;
   padding-left: 35px;
@@ -520,6 +554,7 @@ dl.fancy-list dd {
 .lista-pastelaria li {
   margin-bottom: 15px;
 }
+
 .lista-servicos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -539,6 +574,7 @@ dl.fancy-list dd {
   color: #5a3a1a;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.12);
 }
+
 .passos-encomenda {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -576,6 +612,7 @@ dl.fancy-list dd {
   align-items: center;
   justify-content: center;
 }
+
 /* =====================================================
    GALERIA
 ===================================================== */
@@ -608,7 +645,6 @@ dl.fancy-list dd {
 .galeria img:hover {
   transform: scale(1.05);
 }
-/* Galeria da página Serviços */
 
 .pastelaria-servico .galeria {
   display: flex;
@@ -619,6 +655,7 @@ dl.fancy-list dd {
   padding: 0;
   margin: 0;
 }
+
 .pastelaria-servico .galeria img {
   width: 350px;
   height: 450px;
@@ -630,22 +667,29 @@ dl.fancy-list dd {
   background: white;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
+
 .pastelaria-servico .categoria-pastelaria h3 {
   font-size: 28px;
   color: #5a3a1a;
   margin-bottom: 15px;
 }
+
 .pastelaria-servico .categoria-pastelaria {
   padding-bottom: 20px;
   border-bottom: 2px solid #ccc;
 }
+
 .pastelaria-servico .categoria-pastelaria:last-child {
   border-bottom: none;
 }
+
 .pastelaria-servico .galeria img:hover {
   transform: scale(1.03);
 }
 
+/* =====================================================
+   CATEGORIAS / PASTELARIA / BOLOS
+===================================================== */
 .categorias-pastelaria {
   display: flex;
   flex-direction: column;
@@ -657,6 +701,7 @@ dl.fancy-list dd {
   width: 100%;
   text-align: center;
 }
+
 #PASTELARIA .categoria-pastelaria h3 {
   font-size: 28px;
   margin-bottom: 15px;
@@ -669,6 +714,7 @@ dl.fancy-list dd {
   margin-bottom: 15px;
   font-style: italic;
 }
+
 .categoria-pastelaria h3 {
   text-align: center;
   margin-bottom: 15px;
@@ -688,6 +734,7 @@ dl.fancy-list dd {
   gap: 20px;
   flex-wrap: nowrap;
 }
+
 .categoria-bolo {
   width: 30%;
   text-align: center;
@@ -696,9 +743,11 @@ dl.fancy-list dd {
   flex-direction: column;
   align-items: center;
 }
+
 .categorias-bolos .categoria-bolo:first-child {
   min-height: 527px;
 }
+
 .bolos-home .ver-inspiracoes {
   margin-top: auto;
 }
@@ -709,6 +758,7 @@ dl.fancy-list dd {
   margin: 10px 0 15px;
   font-weight: bold;
 }
+
 .categoria-bolo img {
   width: 350px;
   height: 350px;
@@ -726,9 +776,11 @@ dl.fancy-list dd {
 .bolos-home .categoria-bolo img:hover {
   transform: scale(1.03);
 }
+
 .categoria-bolo img:hover {
   transform: scale(1.05);
 }
+
 .bolos-home .categoria-bolo {
   background: white;
   padding: 10px;
@@ -750,10 +802,12 @@ dl.fancy-list dd {
 .bolos-home .ver-inspiracoes:hover {
   text-decoration: underline;
 }
+
 .categoria-galeria h3 {
   font-size: 28px;
   margin-bottom: 20px;
 }
+
 .categoria-galeria {
   width: 100%;
   text-align: center;
@@ -761,9 +815,35 @@ dl.fancy-list dd {
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
+
 .categoria-galeria:last-child {
   border-bottom: none;
 }
+
+.pastelaria-home .galeria img {
+  width: 280px;
+  height: 360px;
+}
+
+.pastelaria-servico .ver-album {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.pastelaria-servico .ver-album a:hover {
+  text-decoration: underline;
+}
+
+.pastelaria-servico .ver-album a {
+  display: inline-block;
+  padding: 8px 14px;
+  color: #3c08e8;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #3c08e8;
+}
+
 /* =====================================================
    VÍDEO E MAPA
 ===================================================== */
@@ -800,9 +880,11 @@ dl.fancy-list dd {
 .redes-sociais i {
   font-size: 50px;
 }
+
 .redes-sociais a {
   text-decoration: none;
 }
+
 .instagram {
   color: #fa1010;
 }
@@ -810,12 +892,13 @@ dl.fancy-list dd {
 .facebook {
   color: rgb(25, 13, 239);
 }
+
 .whatsapp {
   color: rgb(5, 181, 5);
 }
 
 /* =====================================================
-   12. PESQUISA
+   PESQUISA
 ===================================================== */
 #output {
   margin-top: 1em;
@@ -826,51 +909,37 @@ dl.fancy-list dd {
 }
 
 /* =====================================================
-   RODAPÉ
+   IMAGENS E ANIMAÇÕES
 ===================================================== */
-
-aside {
-  background: #f1be2f;
-  padding: 15px;
-  border-left: 5px solid #1565c0;
-  margin-top: 20px;
+.imagem-sobre {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+  border: 4px solid #f1be2f;
+  transition: transform 0.5s;
+  animation: girar-imagem 5s ease-out;
+  transform-style: preserve-3d;
 }
 
-footer {
-  background-color: #f1be2f;
-  color: rgba(39, 1, 1, 0.774);
-  text-align: center;
-  padding: 20px 0;
+@keyframes girar-imagem {
+  from {
+    transform: rotateY(0deg);
+  }
 
-  bottom: 0;
-  width: 100%;
-}
-.liuraroda {
-  font-weight: bold;
-  color: rgb(47, 0, 255);
-}
-.pastelaria-home .galeria img {
-  width: 280px;
-  height: 360px;
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
-.pastelaria-servico .ver-album {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
+.imagem-sobre:hover {
+  transform: scale(1.05);
 }
 
-.pastelaria-servico .ver-album a:hover {
-  text-decoration: underline;
-}
-.pastelaria-servico .ver-album a {
-  display: inline-block;
-  padding: 8px 14px;
-  color: #3c08e8;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid #3c08e8;
-}
+/* =====================================================
+   EQUIPA
+===================================================== */
 .membro-equipa h4 {
   margin: 12px 0 5px;
   color: #5a3a1a;
@@ -916,32 +985,6 @@ footer {
   text-align: center;
 }
 
-/* IMAGEM DA PÁGINA SOBRE */
-
-.imagem-sobre {
-  width: auto;
-  height: 300px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 20px;
-  border: 4px solid #f1be2f;
-  transition: transform 0.5s;
-  animation: girar-imagem 5s ease-out;
-  transform-style: preserve-3d;
-}
-
-@keyframes girar-imagem {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
-}
-.imagem-sobre:hover {
-  transform: scale(1.05);
-}
 .membro-equipa img {
   width: min(180px, 100%);
   height: auto;
@@ -962,6 +1005,7 @@ footer {
   transform: scale(1.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
+
 .equipa {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -970,12 +1014,38 @@ footer {
 
 .membro-equipa {
   text-align: center;
+  min-width: 0;
 }
+
 /* =====================================================
-   RESPONSIVIDADE - TABLETS E SMARTPHONES
+   RODAPÉ
+===================================================== */
+aside {
+  background: #f1be2f;
+  padding: 15px;
+  border-left: 5px solid #1565c0;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #f1be2f;
+  color: rgba(39, 1, 1, 0.774);
+  text-align: center;
+  padding: 20px 0;
+
+  width: 100%;
+}
+
+.liuraroda {
+  font-weight: bold;
+  color: rgb(47, 0, 255);
+}
+
+/* =====================================================
+   RESPONSIVIDADE — TABLETS E SMARTPHONES
+   Regras para ecrãs até 768px
 ===================================================== */
 
-/* ---------- Header ---------- */
 @media (max-width: 768px) {
   header {
     padding: 10px;
@@ -1000,8 +1070,6 @@ footer {
     margin: 10px 0 20px;
     line-height: 1.2;
   }
-
-  /* ---------- Formulários ---------- */
 
   #formulario_idioma,
   #formulario_pesquisa {
@@ -1040,8 +1108,6 @@ footer {
     box-sizing: border-box;
   }
 
-  /* ---------- Navegação ---------- */
-
   nav ul li {
     margin: 2px;
   }
@@ -1051,8 +1117,6 @@ footer {
     padding: 4px 6px;
     font-size: 1rem;
   }
-
-  /* ---------- Conteúdo ---------- */
 
   main {
     width: 100%;
@@ -1078,7 +1142,6 @@ footer {
     height: auto;
     object-fit: contain;
   }
-  /* ---------- Tabela ---------- */
 
   .horario {
     width: 100%;
@@ -1093,8 +1156,6 @@ footer {
   .galeria {
     flex-direction: column;
   }
-
-  /* ---------- Galeria ---------- */
 
   .galeria img {
     width: 100%;
@@ -1123,13 +1184,10 @@ footer {
     box-sizing: border-box;
   }
 
-  /* ---------- Vídeo e mapa ---------- */
   .video-liurame,
   .mapa-container {
     width: 100%;
   }
-
-  /* ---------- Geral ---------- */
 
   html,
   body {
@@ -1157,23 +1215,11 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-.bloco-historia {
-  background-size: cover;
-  background-position: center;
-}
-.bloco-missao {
-  background-size: cover;
-  background-position: center;
-  background-color: #fff;
-}
-
-.membro-equipa {
-  min-width: 0;
-}
 
 /* =====================================================
-     RESPONSIVIDADE - LANDSCAPE
- ===================================================== */
+   RESPONSIVIDADE — LANDSCAPE
+   Regras para telemóveis/tablets até 768px em horizontal
+===================================================== */
 
 @media (max-width: 768px) and (orientation: landscape) {
   .logo {

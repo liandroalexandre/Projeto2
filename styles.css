@@ -269,9 +269,6 @@ button:hover {
   margin: 10px auto 25px;
   color: #5a3a1a;
 }
-/* =====================================================
-   APRESENTÇÃO HOME
-===================================================== */
 .apresentacao-home {
   position: relative;
   text-align: center;
@@ -279,7 +276,6 @@ button:hover {
   margin-bottom: 20px;
   overflow: hidden;
 }
-
 .apresentacao-home::before,
 .apresentacao-home::after {
   content: "";
@@ -288,7 +284,7 @@ button:hover {
   height: 80px;
   background: #f1be2f;
   border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .apresentacao-home::before {
@@ -320,7 +316,7 @@ button:hover {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-/* ===================================================== */
+
 #SOBRE_NOS,
 #LOCALIZACAO,
 #CONTACTOS {
@@ -417,17 +413,20 @@ button:hover {
   padding: 30px;
   border-radius: 8px;
 }
-/*================================================
+/* =====================================================
   TABELA
   DE
   HORÁRIOS
-  =====================================================*/
+  =====================================================
+  */
 .horario {
   width: 70%;
-  margin: 0 auto 30px;
+  margin: 20px auto;
   border-collapse: collapse;
   background: white;
+  margin: 0 auto 30px;
 }
+
 .horario th,
 .horario td {
   border: 1px solid #000;
@@ -711,7 +710,7 @@ dl.fancy-list dd {
   align-items: center;
 }
 .categorias-bolos .categoria-bolo:first-child {
-  min-height: 527px;
+  min-height: 52px;
 }
 .bolos-home .ver-inspiracoes {
   margin-top: auto;
@@ -899,6 +898,9 @@ footer {
   color: #5a3a1a;
   font-size: 1.2rem;
   font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .membro-equipa p {
@@ -909,6 +911,7 @@ footer {
   line-height: 1.4;
   max-width: 220px;
   text-align: center;
+  overflow-wrap: break-word;
 }
 #equipa .membro-equipa p {
   text-align: center;
@@ -962,7 +965,18 @@ footer {
 .imagem-sobre:hover {
   transform: scale(1.05);
 }
-
+.membro-equipa img {
+  width: min(180px, 100%);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #f1be2f;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
 /* =====================================================
    RESPONSIVIDADE - TABLETS E SMARTPHONES
 ===================================================== */
@@ -1191,8 +1205,8 @@ footer {
     width: 100%;
     height: auto;
     object-fit: contain;
-    box-sizing: border-box;
   }
+
   .categoria-bolo .ver-inspiracoes {
     margin-top: auto;
   }

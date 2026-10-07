@@ -355,19 +355,83 @@ button:hover {
   color: #5a3a1a;
   margin: 10px 0;
 }
-/* =====================================================
-   TABELA DE HORÁRIOS
-===================================================== */
-.horario {
+.bloco-historia {
+  position: relative;
+  background-image: url("imagens/fundos/historia.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bloco-historia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bloco-historia > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bloco-historia p {
+  color: #000;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+.bloco-missao {
+  background-image: url("imagens/fundos/missao.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 8px;
+}
+.bloco-visao {
+  background-image: url("imagens/fundos/visao.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 8px;
+}
+.bloco-visao p {
+  color: #000;
+  font-weight: 700;
+}
+.bloco-valores {
+  background-image: url("imagens/fundos/valores.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 8px;
+}
+================================================
+  TABELA
+  DE
+  HORÁRIOS
+  =====================================================
+  */
+  .horario {
   width: 70%;
   margin: 20px auto;
   border-collapse: collapse;
   background: white;
 }
-
+.horario {
+  margin-bottom: 30px;
+  margin: 0 auto 30px;
+}
 .horario th,
 .horario td {
-  border: 1px solid #ddd;
+  border: 1px solid #000;
   padding: 12px;
   text-align: center;
 }
@@ -859,6 +923,34 @@ footer {
   font-weight: bold;
   text-align: center;
 }
+
+/* IMAGEM DA PÁGINA SOBRE */
+
+.imagem-sobre {
+  width: auto;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+  border: 4px solid #f1be2f;
+  transition: transform 0.5s;
+  animation: girar-imagem 5s ease-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes girar-imagem {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.imagem-sobre:hover {
+  transform: scale(1.05);
+}
+
 /* =====================================================
    RESPONSIVIDADE - TABLETS E SMARTPHONES
 ===================================================== */
@@ -999,6 +1091,14 @@ footer {
     height: auto;
     box-sizing: border-box;
   }
+  .imagem-sobre {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+
   /* ---------- Vídeo e mapa ---------- */
   .video-liurame,
   .mapa-container {
@@ -1020,6 +1120,20 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+.bloco-historia {
+  background-size: cover;
+  background-position: center;
+}
+.bloco-missao {
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+}
+.bloco-visao {
+  background-position: center;
+  background-size: cover;
+}
+
 /* =====================================================
      RESPONSIVIDADE - LANDSCAPE
  ===================================================== */
@@ -1049,21 +1163,6 @@ footer {
   }
 }
 
-/* IMAGEM DA PÁGINA SOBRE */
-
-.imagem-sobre {
-  width: auto;
-  height: 300px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 20px;
-  border: 4px solid #f1be2f;
-  transition: transform 0.5s;
-}
-
-.imagem-sobre:hover {
-  transform: scale(1.05);
-}
 .membro-equipa img {
   transition:
     transform 0.3s ease,

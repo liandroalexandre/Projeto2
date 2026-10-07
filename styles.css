@@ -421,7 +421,7 @@ button:hover {
   */
 .horario {
   width: 70%;
-  margin: 20px auto;
+
   border-collapse: collapse;
   background: white;
   margin: 0 auto 30px;
@@ -631,8 +631,6 @@ dl.fancy-list dd {
   height: 450px;
   object-fit: cover;
   box-sizing: border-box;
-}
-.pastelaria-servico .galeria img {
   border: 4px solid #f1be2f;
   border-radius: 12px;
   padding: 5px;
@@ -671,11 +669,7 @@ dl.fancy-list dd {
   margin-bottom: 15px;
   color: #5a3a1a;
 }
-.pastelaria-home .categoria-pastelaria h3 {
-  font-size: 1.5rem;
-  color: #5a3a1a;
-  margin-bottom: 15px;
-}
+
 .pastelaria-home .categoria-pastelaria h3 {
   font-size: 1.5rem;
   color: #5a3a1a;
@@ -710,14 +704,12 @@ dl.fancy-list dd {
   align-items: center;
 }
 .categorias-bolos .categoria-bolo:first-child {
-  min-height: 52px;
+  min-height: 527px;
 }
 .bolos-home .ver-inspiracoes {
   margin-top: auto;
 }
-.bolos-home .ver-inspiracoes {
-  margin-top: auto;
-}
+
 #BOLOS .categoria-bolo h3 {
   font-size: 1.5rem;
   color: #5a3a1a;
@@ -737,9 +729,7 @@ dl.fancy-list dd {
   max-width: 100%;
   box-sizing: border-box;
 }
-.bolos-home .categoria-bolo img {
-  border-radius: 12px;
-}
+
 .bolos-home .categoria-bolo img:hover {
   transform: scale(1.03);
 }
@@ -752,11 +742,7 @@ dl.fancy-list dd {
   border-radius: 12px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
-.bolos-home .categoria-bolo h3 {
-  font-size: 1.4rem;
-  color: #5a3a1a;
-  margin-bottom: 10px;
-}
+
 .bolos-home .ver-inspiracoes {
   display: inline-block;
   margin-top: 10px;
@@ -767,10 +753,7 @@ dl.fancy-list dd {
   font-weight: bold;
   border-radius: 5px;
 }
-.categoria-galeria {
-  width: 100%;
-  text-align: center;
-}
+
 .bolos-home .ver-inspiracoes:hover {
   text-decoration: underline;
 }
@@ -779,6 +762,8 @@ dl.fancy-list dd {
   margin-bottom: 20px;
 }
 .categoria-galeria {
+  width: 100%;
+  text-align: center;
   border-bottom: 2px solid #ccc;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -913,11 +898,7 @@ footer {
   text-align: center;
   overflow-wrap: break-word;
 }
-#equipa .membro-equipa p {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 220px;
-}
+
 #sobre > section ul {
   display: flex;
   flex-wrap: wrap;
@@ -984,6 +965,15 @@ footer {
 .membro-equipa img:hover {
   transform: scale(1.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+.equipa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.membro-equipa {
+  text-align: center;
 }
 /* =====================================================
    RESPONSIVIDADE - TABLETS E SMARTPHONES
@@ -1174,6 +1164,7 @@ footer {
 .membro-equipa {
   min-width: 0;
 }
+
 /* =====================================================
      RESPONSIVIDADE - LANDSCAPE
  ===================================================== */
@@ -1219,31 +1210,5 @@ footer {
     margin-top: auto;
   }
 
-  /* IMAGENS DA EQUIPA */
-
-  .membro-equipa img {
-    width: min(180px, 100%);
-    height: auto;
-    aspect-ratio: 1 / 1;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border: 4px solid #f1be2f;
-    border-radius: 50%;
-    box-sizing: border-box;
-  }
-
   /* GRELHA DA EQUIPA */
-
-  .equipa {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-  /* CONTEÚDO DOS MEMBROS */
-
-  .membro-equipa {
-    text-align: center;
-  }
 }

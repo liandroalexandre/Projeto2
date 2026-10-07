@@ -47,14 +47,7 @@ section {
   margin: 10px 0 15px;
   font-style: italic;
 }
-#sobre > section ul {
-  max-width: 700px;
-  margin: 10px auto;
-  padding-left: 25px;
-  line-height: 1.8;
-  color: #3f3f3f;
-  font-size: 1.05rem;
-}
+
 /* =====================================================
    CABEÇALHO (HEADER)
 ===================================================== */
@@ -895,7 +888,7 @@ footer {
   font-style: italic;
   line-height: 1.4;
   max-width: 220px;
-  text-align: center;
+  text-align: center !important;
   overflow-wrap: break-word;
 }
 
@@ -908,6 +901,9 @@ footer {
   margin: 15px auto;
   padding: 0;
   list-style: none;
+  line-height: 1.8;
+  color: #3f3f3f;
+  font-size: 1.05rem;
 }
 
 #sobre > section ul li {
@@ -1143,6 +1139,19 @@ footer {
   .equipa {
     grid-template-columns: 1fr;
   }
+
+  .membro-equipa h4,
+  .membro-equipa p {
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .membro-equipa p {
+    width: 220px;
+    max-width: 100%;
+    text-align-last: center;
+  }
   .lista-servicos,
   .passos-encomenda {
     grid-template-columns: 1fr;
@@ -1157,10 +1166,7 @@ footer {
   background-position: center;
   background-color: #fff;
 }
-.bloco-visao {
-  background-position: center;
-  background-size: cover;
-}
+
 .membro-equipa {
   min-width: 0;
 }
@@ -1209,6 +1215,12 @@ footer {
   .categoria-bolo .ver-inspiracoes {
     margin-top: auto;
   }
+  .membro-equipa p {
+    width: 220px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
-  /* GRELHA DA EQUIPA */
+    letter-spacing: normal;
+  }
 }

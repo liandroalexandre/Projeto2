@@ -643,7 +643,10 @@ dl.fancy-list dd {
 }
 
 .galeria img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+.galeria img {
+  box-sizing: border-box;
 }
 
 .pastelaria-servico .galeria {
@@ -1218,10 +1221,10 @@ footer {
 
 /* =====================================================
    RESPONSIVIDADE — LANDSCAPE
-   Regras para telemóveis/tablets até 768px em horizontal
+   Regras para telemóveis/tablets até 900px em horizontal
 ===================================================== */
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
   .logo {
     width: 120px;
   }
@@ -1268,5 +1271,24 @@ footer {
     margin-right: auto;
 
     letter-spacing: normal;
+  }
+  .galeria {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .galeria img {
+    width: 300px;
+    max-width: calc(50% - 15px);
+    height: 380px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.03);
   }
 }

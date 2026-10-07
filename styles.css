@@ -417,21 +417,16 @@ button:hover {
   padding: 30px;
   border-radius: 8px;
 }
-================================================
+/*================================================
   TABELA
   DE
   HORÁRIOS
-  =====================================================
-  */
-  .horario {
+  =====================================================*/
+.horario {
   width: 70%;
-  margin: 20px auto;
+  margin: 0 auto 30px;
   border-collapse: collapse;
   background: white;
-}
-.horario {
-  margin-bottom: 30px;
-  margin: 0 auto 30px;
 }
 .horario th,
 .horario td {

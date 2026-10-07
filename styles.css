@@ -976,6 +976,14 @@ footer {
   border: 4px solid #f1be2f;
   border-radius: 50%;
   box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.membro-equipa img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 /* =====================================================
    RESPONSIVIDADE - TABLETS E SMARTPHONES
@@ -1211,15 +1219,6 @@ footer {
     margin-top: auto;
   }
 
-  .membro-equipa img {
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-  .membro-equipa img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-  }
   /* IMAGENS DA EQUIPA */
 
   .membro-equipa img {

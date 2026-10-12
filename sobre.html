@@ -2,243 +2,147 @@
 <html lang="pt">
 
 <head>
-
-
   <meta charset="UTF-8">
-  <meta name="description" content=" LIURAME SABORES: DELÍCIAS E SABORES A CADA PEDAÇO">
-
-  <meta name="author" content=" Liandro Alexandre">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="robots" content="max-image-preview:large">
 
+  <title>Sobre | Liurame Music</title>
+  <meta name="description"
+    content="Conhece a Liurame Music e os seus estilos musicais: Kizomba, Semba, música romântica e Afrohouse.">
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <meta property="og:title" content="LIURAME Sabores">
-  <meta property="og:url" content="imagens/LOGOLIURAME.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <meta property="og:description" content="Descubra sabores incríveis.">
-  <meta property="og:image" content="imagens/LOGOLIURAME.png">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="musica.css">
 
-
-  <title> LIURAME SABORES</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-
-
-  <link rel="stylesheet" href="styles.css">
-
-
-  <script src="script.js" defer></script>
+  <!-- JavaScript -->
+  <script src="musica.js" defer></script>
 </head>
 
 <body>
 
-
+  <!-- CABEÇALHO E MENU -->
   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
 
-    <div class="topo-header">
+        <a class="navbar-brand" href="index.html">
+          <img src="imagens/logotipos/logolimusic7.png" alt="Logótipo oficial da Liurame Music" class="logo">
+        </a>
 
-      <div class="idioma-container">
-        <form id="formulario_idioma" action="/submit" method="post">
-          <label for="idioma"></label>
-          <select id="idioma" name="idioma">
-            <option value="pt-BR">Português (Brasil)</option>
-            <option value="pt-PT">Português (Portugal)</option>
-            <option value="en">English</option>
-          </select>
-        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="albuns.html">Álbuns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tour.html">Tour</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
-
-      <div class="pesquisa-container">
-        <form id="formulario_pesquisa" action="/search" method="get">
-          <label for="pesquisa"></label>
-
-          <input type="search" id="pesquisa" name="pesquisa" pattern="[A-Za-z0-9\s]{3,}"
-            title="A pesquisa deve ter pelo menos 3 caracteres alfanuméricos" placeholder="Pesquisar" required>
-
-          <button id="botao-pesquisa" type="submit" aria-label="Pesquisar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-
-        </form>
-      </div>
-
-    </div>
-
-    <div class="logo-container">
-      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ=="
-        title="Ir para a página inicial da LIURAME SABORES">
-        <img src="imagens/LOGOLIURAME.png" class="logo" alt="Logotipo da Liurame Sabores">
-      </a>
-    </div>
-
-    <div class="titulo-container">
-      <h1 class="titulo-principal">
-        Bem-vindo a Liurame Sabores
-      </h1>
-    </div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="sobre.html" class="ativo">SOBRE NÓS</a></li>
-        <li><a href="servicos.html">SERVIÇOS</a></li>
-        <li><a href="galeria.html">GALERIA</a></li>
-        <li><a href="contacto.html">CONTACTOS</a></li>
-      </ul>
     </nav>
-
   </header>
 
-
+  <!-- CONTEÚDO PRINCIPAL -->
   <main>
 
+    <!-- IMAGEM E TÍTULO -->
+    <section class="container py-5">
+      <div class="row align-items-center g-4">
 
-
-    <section id="sobre">
-      <h2 class="titulo-categoria">Sobre a Liurame Sabores</h2>
-
-      <img src="imagens/fundos/formacaoamelia.png " class="imagem-sobre" alt="Formação da Liurame Sabores">
-
-      <article class="bloco-historia">
-        <h3>História</h3>
-
-        <p>
-          A Liurame Sabores nasceu da paixão pela pastelaria e pelo prazer de criar sabores especiais.
-
-          Inspiramo-nos na tradição portuguesa, combinando receitas de sempre com criatividade e dedicação.
-
-        </p>
-      </article>
-
-      <section class="bloco-missao">
-        <h3>Missão</h3>
-
-        <p>
-          Criar produtos frescos e de qualidade, preparados com dedicação para tornar cada momento mais especial.
-
-        </p>
-      </section>
-
-      <section class="bloco-visao">
-        <h3>Visão</h3>
-
-        <p>
-          Ser uma referência na pastelaria e confeitaria, reconhecida pela qualidade, criatividade e satisfação dos
-          nossos clientes.
-
-        </p>
-      </section>
-
-      <section class="bloco-valores">
-        <h3>Valores</h3>
-        <ul>
-          <li>Qualidade</li>
-          <li>Dedicação</li>
-          <li>Inovação</li>
-          <li>Tradição</li>
-          <li>Compromisso com o cliente</li>
-        </ul>
-      </section>
-
-
-
-      <section id="equipa">
-        <h3>A Nossa Equipa</h3>
-
-        <p>
-          A nossa equipa trabalha diariamente com dedicação e carinho,
-          procurando garantir a qualidade e a frescura de cada produto.
-        </p>
-
-        <div class="equipa">
-
-          <article class="membro-equipa">
-            <img src="imagens/equipa/liandroeq.png" alt="Liandro Alexandre">
-            <h4>Liandro Alexandre</h4>
-            <p>Responsável pela gestão e organização da Liurame Sabores.</p>
-          </article>
-
-          <article class="membro-equipa">
-            <img src="imagens/equipa/ameliaeq.png" alt="Amélia Alexandre">
-            <h4>Amélia Alexandre</h4>
-            <p>
-              Responsável pela equipa de preparação e decoração dos bolos e doces.
-            </p>
-          </article>
-
-          <article class="membro-equipa">
-            <img src="imagens/equipa/aidaeq.jpg" alt="Aida Jovita">
-            <h4>Aida Jovita</h4>
-            <p>Pasteleira da Liurame Sabores.</p>
-          </article>
-
-          <article class="membro-equipa">
-            <img src="imagens/equipa/maniziaeq.jpg" alt="Manízia Batalha">
-            <h4>Manízia Batalha</h4>
-            <p>Decoradora de bolos e doces da Liurame Sabores.</p>
-          </article>
-
-          <article class="membro-equipa">
-            <img src="imagens/equipa/agostinhoeq.jpg" alt="Agostinho Costa">
-            <h4>Agostinho Costa</h4>
-            <p>Padeiro da Liurame Sabores.</p>
-          </article>
+        <div class="col-lg-7">
+          <img src="imagens/sobre/capasobre1.webp" class="img-fluid rounded"
+            alt="Imagem de apresentação da Liurame Music">
         </div>
-      </section>
-      <aside>
-        <h3>Curiosidade</h3>
 
-        <p class="sobre-texto">
-          Sabia que o nome <strong>Liurame</strong> resulta da combinação das iniciais dos membros da família fundadora?
+        <div class="col-lg-5">
+          <p class="text-uppercase">Ritmo. Cultura. Emoção.</p>
 
-          Um nome que representa o espírito familiar, a dedicação e o carinho presentes em cada receita.
+          <h1>Sobre a Liurame Music</h1>
 
-        </p>
-      </aside>
+          <p>
+            Uma viagem musical entre os sons, os sentimentos
+            e a energia de África.
+          </p>
 
+          <a href="albuns.html" class="btn btn-outline-warning mt-3">
+            <i class="fas fa-music"></i> Explorar músicas
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ESTILOS MUSICAIS -->
+    <section class="container py-5">
+      <h2 class="text-center mb-4">Os nossos ritmos</h2>
+
+      <div class="row g-4">
+
+        <div class="col-6 col-lg-3">
+          <div class="cartao-musica text-center p-4 h-100">
+            <i class="fas fa-heart fa-2x mb-3"></i>
+            <h3>Kizomba</h3>
+            <p>Ritmo e conexão.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="cartao-musica text-center p-4 h-100">
+            <i class="fas fa-guitar fa-2x mb-3"></i>
+            <h3>Semba</h3>
+            <p>Raízes e tradição.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="cartao-musica text-center p-4 h-100">
+            <i class="fas fa-heart fa-2x mb-3"></i>
+            <h3>Românticas</h3>
+            <p>Melodias e sentimentos.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="cartao-musica text-center p-4 h-100">
+            <i class="fas fa-headphones fa-2x mb-3"></i>
+            <h3>Afrohouse</h3>
+            <p>Batidas e energia.</p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
-  <footer>
-
-    <p class="liuraroda">
-
-      <strong>LIURAME SABORES</strong>
-    </p>
-
-
-
-    <div class="redes-sociais">
-      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" aria-label="Instagram"
-        target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram instagram"></i>
-      </a>
-
-      <a href="https://www.facebook.com/liurame" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-facebook-f facebook"></i>
-      </a>
-
-      <a href="https://wa.me/351937774281" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp whatsapp"></i>
-      </a>
-    </div>
-    <P>Email: comercial.liurame@gmail.com</p>
-    <P>Telefone: 937 774 281</p>
-
-    <p>© 2026 Copyright LIURAME SABORES. <a href="documentos/Politica-Privacidade.pdf">TERMOS DE USO |
-        POLÍTICA DE PRIVACIDADE | CONFIGURAÇÕES DE PRIVACIDADE</a></p>
-
-
-
-
+  <!-- RODAPÉ -->
+  <footer class="rodape text-center py-4">
+    <p>&copy; <span id="ano_atual"></span> Liurame Music. Todos os direitos reservados.</p>
   </footer>
 
-
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 
 </html>

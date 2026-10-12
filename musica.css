@@ -1,0 +1,354 @@
+/* ========================================
+   LIURAME MUSIC — ESTILO PRINCIPAL
+   ======================================== */
+
+/* 1. Variáveis de cores */
+:root {
+  --cor-fundo: #191a20;
+  --cor-fundo-secundario: #191a20;
+  --cor-dourada: #d4af67;
+  --cor-dourada-hover: #edcc8b;
+  --cor-texto: #f5f5f5;
+  --cor-texto-secundario: #b9b9c0;
+  --cor-borda: #ef7016;
+  --cor-titulo-album: white;
+  --cor-texto-album: #d4af67;
+}
+
+/* 2. Configurações gerais */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-texto);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+p {
+  color: var(--cor-texto-secundario);
+}
+
+a {
+  color: var(--cor-dourada);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--cor-dourada-hover);
+}
+
+/* 3. Cabeçalho e navegação */
+header {
+  background-color: #ef7016;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-nav {
+  gap: 8px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--cor-texto);
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--cor-dourada);
+}
+
+.navbar-toggler {
+  border-color: var(--cor-borda);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem var(--cor-borda);
+}
+
+/* 4. Secção principal */
+.hero {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+  background:
+    radial-gradient(
+      ellipse at 85% 35%,
+      rgba(212, 175, 103, 0.12),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #101114, #1b1b21);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero h1 {
+  margin: 12px 0 22px;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  letter-spacing: -2px;
+}
+
+.texto-destaque {
+  color: var(--cor-dourada);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.texto-intro {
+  max-width: 650px;
+  margin-bottom: 28px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* 5. Botões */
+.btn {
+  margin: 5px 8px 5px 0;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-dourado {
+  color: #171717;
+  background-color: var(--cor-dourada);
+  border: 1px solid var(--cor-dourada);
+}
+
+.btn-dourado:hover {
+  color: #171717;
+  background-color: var(--cor-dourada-hover);
+  border-color: var(--cor-dourada-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+  color: #171717;
+  background-color: var(--cor-texto);
+}
+
+/* 6. Área de destaques */
+.destaques {
+  padding-top: 70px !important;
+  padding-bottom: 75px !important;
+}
+
+.destaques > .text-center {
+  margin-bottom: 40px !important;
+}
+
+.cartao-musica {
+  padding: 30px;
+  background-color: var(--cor-fundo-secundario);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cartao-musica:hover {
+  transform: translateY(-6px);
+  border-color: var(--cor-dourada);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.icone-cartao {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--cor-dourada);
+  font-size: 2rem;
+}
+
+.cartao-musica h3 {
+  margin-bottom: 15px;
+  font-size: 1.35rem;
+}
+
+.cartao-musica p {
+  margin-bottom: 22px;
+}
+
+.cartao-musica a {
+  font-weight: 600;
+}
+
+.cartao-musica a i {
+  margin-left: 5px;
+}
+
+/* 7. Redes sociais */
+.redes-destaque {
+  background-color: #191a20;
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.card-title {
+  color: var(--cor-titulo-album);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  color: var(--cor-texto-album);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.redes-destaque h2 {
+  margin-bottom: 15px;
+}
+
+.icone-social {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 6px 0;
+  color: var(--cor-dourada);
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.icone-social:hover {
+  color: var(--cor-fundo);
+  background-color: var(--cor-dourada);
+  border-color: var(--cor-dourada);
+  transform: translateY(-3px);
+}
+
+/* 8. Rodapé */
+.rodape {
+  background-color: #ef7016;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.rodape p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.rodape a {
+  font-size: 0.9rem;
+}
+
+.separador {
+  margin: 0 10px;
+  color: var(--cor-texto-secundario);
+}
+
+/* 9. Acessibilidade: foco do teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--cor-dourada);
+  outline-offset: 4px;
+}
+
+/* 10. Tablets e telemóveis */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    gap: 0;
+    padding-top: 12px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+
+  .hero {
+    min-height: 400px;
+    padding: 70px 0;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .texto-intro {
+    font-size: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .cartao-musica {
+    padding: 24px;
+  }
+
+  .destaques {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
+/* 11. Preferência por menos animações */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

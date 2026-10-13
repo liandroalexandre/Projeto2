@@ -439,6 +439,10 @@ section {
   color: #ffffff;
 }
 
+.pagina-albuns hr {
+  display: none;
+}
+
 /* 13. TABLETS */
 
 @media (max-width: 991.98px) {

@@ -22,7 +22,7 @@
   <script src="musica.js" defer></script>
 </head>
 
-<body>
+<body class="pagina-albuns">
 
   <!-- CABEÇALHO E MENU -->
   <header>
@@ -42,7 +42,32 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
             <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link active" href="albuns.html">Álbuns</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="albuns.html" id="menuAlbuns" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Álbuns
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuAlbuns">
+                <li>
+                  <a class="dropdown-item" href="albuns.html">Todos os álbuns</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#afrohouse">Afrohouse</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#semba">Semba</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#kizomba">Kizomba</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#romantica">Romântica</a>
+                </li>
+              </ul>
+            </li>
+
             <li class="nav-item"><a class="nav-link" href="tour.html">Tour</a></li>
             <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
           </ul>
@@ -73,9 +98,9 @@
             <div class="card-body text-center">
               <p class="text-uppercase">Afrohouse</p>
               <h2 class="h5 card-title">Essentialis Volume I </h2>
-              <span class="btn btn-outline-warning btn-sm">
+              <a href="#afrohouse" class="btn btn-outline-warning">
                 <i class="fas fa-music"></i> Descobrir
-              </span>
+              </a>
             </div>
           </article>
         </div>
@@ -88,9 +113,9 @@
             <div class="card-body text-center">
               <p class="text-uppercase">Semba</p>
               <h2 class="h5 card-title">Risca o Chão</h2>
-              <span class="btn btn-outline-warning btn-sm">
+              <a href="#semba" class="btn btn-outline-warning">
                 <i class="fas fa-music"></i> Descobrir
-              </span>
+              </a>
             </div>
           </article>
         </div>
@@ -103,9 +128,9 @@
             <div class="card-body text-center">
               <p class="text-uppercase">Kizomba</p>
               <h2 class="h5 card-title">Sentimentos</h2>
-              <span class="btn btn-outline-warning btn-sm">
+              <a href="#kizomba" class="btn btn-outline-warning">
                 <i class="fas fa-music"></i> Descobrir
-              </span>
+              </a>
             </div>
           </article>
         </div>
@@ -118,9 +143,9 @@
             <div class="card-body text-center">
               <p class="text-uppercase">Romântica</p>
               <h2 class="h5 card-title">Protetor</h2>
-              <span class="btn btn-outline-warning btn-sm">
+              <a href="#romantica" class="btn btn-outline-warning">
                 <i class="fas fa-music"></i> Descobrir
-              </span>
+              </a>
             </div>
           </article>
         </div>
@@ -133,11 +158,79 @@
 
     </section>
 
+    <section class="container py-5" id="detalhes-albuns">
+      <div class="text-center mb-4">
+        <p class="text-uppercase">Conhece cada sonoridade</p>
+        <h2>Detalhes dos álbuns</h2>
+      </div>
+
+      <article id="afrohouse" class="detalhe-album row align-items-center g-4 mb-5">
+        <div class="col-md-4">
+          <img src="imagens/capas/albumafro.webp" class="img-fluid rounded" alt="Capa ilustrativa de Ritmos de África">
+        </div>
+        <div class="col-md-8">
+          <p>AFROHOUSE</p>
+          <h3>Ritmos de África</h3>
+          <p>Uma proposta visual inspirada em ritmos eletrónicos e influências africanas.</p>
+        </div>
+      </article>
+
+      <article id="semba" class="detalhe-album row align-items-center g-4 mb-5">
+        <div class="col-md-4">
+          <img src="imagens/capas/albumsemba.webp" class="img-fluid rounded" alt="Capa ilustrativa de Raízes do Semba">
+        </div>
+        <div class="col-md-8">
+          <p>SEMBA</p>
+          <h3>Raízes do Semba</h3>
+          <p>Uma homenagem visual à tradição, à dança e à identidade musical angolana.</p>
+        </div>
+      </article>
+
+      <article id="kizomba" class="detalhe-album row align-items-center g-4 mb-5">
+        <div class="col-md-4">
+          <img src="imagens/capas/albumkizomba.webp" class="img-fluid rounded"
+            alt="Capa ilustrativa de Corpos em Sintonia">
+        </div>
+        <div class="col-md-8">
+          <p>KIZOMBA</p>
+          <h3>Corpos em Sintonia</h3>
+          <p>Uma proposta inspirada na proximidade, na dança e na ligação entre pessoas.</p>
+        </div>
+      </article>
+
+      <article id="romantica" class="detalhe-album row align-items-center g-4">
+        <div class="col-md-4">
+          <img src="imagens/capas/albumromantica.webp" class="img-fluid rounded" alt="Capa ilustrativa de Amor Sem Fim">
+        </div>
+        <div class="col-md-8">
+          <p>ROMÂNTICA</p>
+          <h3>Amor Sem Fim</h3>
+          <p>Uma proposta visual dedicada aos sentimentos e às histórias de amor.</p>
+        </div>
+      </article>
+
+
+    </section>
+
   </main>
 
   <!-- RODAPÉ -->
   <footer class="rodape text-center py-4">
-    <p>&copy; <span id="ano_atual"></span> Liurame Music. Todos os direitos reservados.</p>
+    <div class="redes-sociais mb-3">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" target="_blank"
+        rel="noopener noreferrer" aria-label="Instagram de Liurame Music">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook de Liurame Music">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+    © <span id="ano_atual"></span> Liurame Music.
+    <a href="documentos/politica-privacidade.pdf" target="_blank" rel="noopener noreferrer">Política de
+      Privacidade</a> · Todos os direitos reservados.
+    <p><a href="index.html" class="text-decoration-none">Voltar ao início</a></p>
   </footer>
 
   <!-- Bootstrap JavaScript -->

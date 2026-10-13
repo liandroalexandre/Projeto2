@@ -1,43 +1,51 @@
-/* ========================================
-   LIURAME MUSIC — ESTILO PRINCIPAL
-   ======================================== */
+/* ==========================================
+   LIURAME MUSIC — CSS PRINCIPAL
+   Tema: escuro, dourado e responsivo
+   ========================================== */
 
-/* 1. Variáveis de cores */
+/* 1. CORES E CONFIGURAÇÕES */
 :root {
-  --cor-fundo: #191a20;
-  --cor-fundo-secundario: #191a20;
+  --cor-fundo-body: #11100e;
+  --cor-fundo-secundario: #1c1915;
   --cor-dourada: #d4af67;
-  --cor-dourada-hover: #edcc8b;
-  --cor-texto: #f5f5f5;
-  --cor-texto-secundario: #b9b9c0;
-  --cor-borda: #ef7016;
-  --cor-titulo-album: white;
-  --cor-texto-album: #d4af67;
+  --cor-dourada-hover: #f0d18d;
+  --cor-texto: #f5f2eb;
+  --cor-texto-secundario: #c8c1b5;
+  --cor-borda: #554329;
+  --cor-rodape: #d6570e;
 }
 
-/* 2. Configurações gerais */
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
-  background-color: var(--cor-fundo);
+  background-color: var(--cor-fundo-body);
   color: var(--cor-texto);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   color: var(--cor-texto);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 h2 {
@@ -51,295 +59,522 @@ p {
 a {
   color: var(--cor-dourada);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 a:hover {
   color: var(--cor-dourada-hover);
 }
 
-/* 3. Cabeçalho e navegação */
-header {
-  background-color: #ef7016;
-  border-bottom: 1px solid var(--cor-borda);
+:focus-visible {
+  outline: 2px solid var(--cor-dourada);
+  outline-offset: 4px;
 }
 
-.navbar {
-  padding-top: 12px;
-  padding-bottom: 12px;
+/* 2. FUNDO INDIVIDUAL DE CADA PÁGINA */
+
+body.pagina-inicio {
+  background-color: #d6570e;
+}
+
+body.pagina-sobre {
+  background-color: #191510;
+}
+
+body.pagina-albuns {
+  background-color: #1c1710;
+}
+
+body.pagina-tour {
+  background-color: #17120d;
+  color: #f5f5f5;
+}
+
+body.pagina-contactos {
+  background-color: #111111;
+}
+
+/* 3. CABEÇALHO E LOGÓTIPO */
+
+header {
+  background-color: #d6570e;
+  border-bottom: 1px solid var(--cor-borda);
 }
 
 .logo {
   display: block;
-  width: 180px;
+  width: 160px;
   max-width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.navbar-nav {
-  gap: 8px;
+/* 4. MENU DE NAVEGAÇÃO */
+
+.navbar {
+  padding: 8px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar .nav-link {
+  padding: 10px 12px;
   color: var(--cor-texto);
-  padding: 10px 14px;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: var(--cor-dourada);
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: var(--cor-dourada) !important;
 }
 
-.navbar-toggler {
-  border-color: var(--cor-borda);
+.navbar .navbar-toggler {
+  border-color: var(--cor-dourada);
 }
 
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0.2rem var(--cor-borda);
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgb(212 175 103 / 30%);
 }
 
-/* 4. Secção principal */
+.navbar .dropdown-menu {
+  background-color: #191510;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.navbar .dropdown-item {
+  padding: 9px 14px;
+  color: var(--cor-texto);
+  border-radius: 4px;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: var(--cor-dourada);
+  color: #17120d;
+}
+
+/* 5. SECÇÃO PRINCIPAL / HERO */
+
 .hero {
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  padding: 90px 0;
-  background:
-    radial-gradient(
-      ellipse at 85% 35%,
-      rgba(212, 175, 103, 0.12),
-      transparent 45%
-    ),
-    linear-gradient(135deg, #101114, #1b1b21);
+  position: relative;
+  padding: 48px 0;
+  background: linear-gradient(135deg, #211b12, #11100e);
   border-bottom: 1px solid var(--cor-borda);
 }
 
-.hero h1 {
-  margin: 12px 0 22px;
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  letter-spacing: -2px;
+/* Mantém a imagem inteira, sem a cortar */
+.hero img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
+.hero h1 {
+  margin: 10px 0 20px;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+}
+
+.hero h2 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.hero p {
+  max-width: 680px;
+}
+
+.pagina-inicio .hero {
+  background: linear-gradient(135deg, #211b12, #11100e);
+}
+
+.pagina-sobre .hero {
+  background: linear-gradient(135deg, #302219, #191510);
+}
+
+.pagina-albuns .hero {
+  background: linear-gradient(135deg, #251c17, #100f12);
+}
+
+.pagina-tour .hero {
+  background: linear-gradient(135deg, #382610, #17120d);
+}
+
+.pagina-contactos .hero {
+  background: linear-gradient(135deg, #292319, #111111);
+}
+
+/* 6. TEXTOS DE DESTAQUE */
+
 .texto-destaque {
+  margin-bottom: 12px;
   color: var(--cor-dourada);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 
 .texto-intro {
   max-width: 650px;
-  margin-bottom: 28px;
-  font-size: 1.15rem;
+  margin-bottom: 24px;
+  font-size: 1.08rem;
   line-height: 1.8;
 }
 
-/* 5. Botões */
+/* 7. BOTÕES */
+
 .btn {
-  margin: 5px 8px 5px 0;
-  padding: 12px 22px;
-  border-radius: 4px;
+  margin: 4px 6px 4px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.btn-dourado {
-  color: #171717;
+.btn-dourado,
+.btn-warning {
+  color: #17120d;
   background-color: var(--cor-dourada);
-  border: 1px solid var(--cor-dourada);
+  border-color: var(--cor-dourada);
 }
 
-.btn-dourado:hover {
-  color: #171717;
+.btn-dourado:hover,
+.btn-warning:hover {
+  color: #17120d;
   background-color: var(--cor-dourada-hover);
   border-color: var(--cor-dourada-hover);
   transform: translateY(-2px);
 }
 
 .btn-outline-light:hover {
-  color: #171717;
-  background-color: var(--cor-texto);
+  color: #17120d;
 }
 
-/* 6. Área de destaques */
+/* 8. SECÇÕES E ESPAÇAMENTO */
+
+section {
+  position: relative;
+}
+
 .destaques {
-  padding-top: 70px !important;
-  padding-bottom: 75px !important;
+  padding-top: 60px;
+  padding-bottom: 65px;
 }
 
 .destaques > .text-center {
-  margin-bottom: 40px !important;
+  margin-bottom: 32px;
 }
 
+.redes-destaque {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--cor-fundo-secundario);
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* 9. CARTÕES DE MÚSICA E ÁLBUNS */
+
 .cartao-musica {
-  padding: 30px;
+  height: 100%;
+  padding: 24px;
   background-color: var(--cor-fundo-secundario);
   border: 1px solid var(--cor-borda);
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .cartao-musica:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: var(--cor-dourada);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 22%);
 }
 
-.icone-cartao {
-  display: inline-block;
-  margin-bottom: 20px;
-  color: var(--cor-dourada);
-  font-size: 2rem;
+.cartao-musica img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .cartao-musica h3 {
-  margin-bottom: 15px;
-  font-size: 1.35rem;
+  margin-bottom: 12px;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .cartao-musica p {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .cartao-musica a {
   font-weight: 600;
 }
 
-.cartao-musica a i {
-  margin-left: 5px;
-}
-
-/* 7. Redes sociais */
-.redes-destaque {
-  background-color: #191a20;
-  border-top: 1px solid var(--cor-borda);
-  border-bottom: 1px solid var(--cor-borda);
+.icone-cartao {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--cor-dourada);
+  font-size: 2rem;
 }
 
 .card-title {
-  color: var(--cor-titulo-album);
-  font-size: 1.2rem;
+  color: #ffffff;
+  font-size: 1.15rem;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
-  color: var(--cor-texto-album);
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.redes-destaque h2 {
-  margin-bottom: 15px;
-}
+/* 10. REDES SOCIAIS */
 
 .icone-social {
   display: inline-flex;
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   align-items: center;
   justify-content: center;
-  margin: 12px 6px 0;
+  margin: 8px 5px 0;
   color: var(--cor-dourada);
   border: 1px solid var(--cor-borda);
   border-radius: 50%;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  transition: all 0.25s ease;
 }
 
 .icone-social:hover {
-  color: var(--cor-fundo);
+  color: #17120d;
   background-color: var(--cor-dourada);
   border-color: var(--cor-dourada);
   transform: translateY(-3px);
 }
 
-/* 8. Rodapé */
+.separador {
+  margin: 0 8px;
+  color: var(--cor-texto-secundario);
+}
+
+/* 11. FORMULÁRIO DE CONTACTOS */
+
+.pagina-contactos .form-label {
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
+.pagina-contactos .form-control,
+.pagina-contactos .form-select {
+  min-height: 46px;
+  padding: 10px 12px;
+  color: #ffffff;
+  background-color: #1b1a18;
+  border: 1px solid #777064;
+  border-radius: 7px;
+}
+
+.pagina-contactos textarea.form-control {
+  min-height: 140px;
+}
+
+.pagina-contactos .form-control::placeholder {
+  color: #c4bfb5;
+}
+
+.pagina-contactos .form-control:focus,
+.pagina-contactos .form-select:focus {
+  color: #ffffff;
+  background-color: #1b1a18;
+  border-color: var(--cor-dourada);
+  box-shadow: 0 0 0 0.2rem rgb(212 175 103 / 25%);
+}
+
+.pagina-contactos .form-control option,
+.pagina-contactos .form-select option {
+  color: #ffffff;
+  background-color: #1b1a18;
+}
+
+#mensagem_sucesso {
+  margin-top: 18px;
+  padding: 14px;
+  color: #d8f3dc;
+  background-color: #17351e;
+  border: 1px solid #347446;
+  border-radius: 6px;
+}
+
+/* 12. RODAPÉ */
+
 .rodape {
-  background-color: #ef7016;
+  padding: 26px 0;
+  background-color: var(--cor-rodape);
   border-top: 1px solid var(--cor-borda);
 }
 
 .rodape p {
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--cor-texto-secundario);
+  font-size: 0.92rem;
 }
 
 .rodape a {
-  font-size: 0.9rem;
+  color: var(--cor-dourada);
+  font-size: 0.92rem;
 }
 
-.separador {
-  margin: 0 10px;
-  color: var(--cor-texto-secundario);
+.rodape a:hover {
+  color: #ffffff;
 }
 
-/* 9. Acessibilidade: foco do teclado */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--cor-dourada);
-  outline-offset: 4px;
-}
+/* 13. TABLETS */
 
-/* 10. Tablets e telemóveis */
 @media (max-width: 991.98px) {
-  .navbar-nav {
-    gap: 0;
-    padding-top: 12px;
+  .logo {
+    width: 145px;
   }
 
-  .navbar-dark .navbar-nav .nav-link {
-    padding: 10px 0;
+  .navbar .nav-link {
+    padding: 9px 8px;
   }
 
   .hero {
-    min-height: 400px;
-    padding: 70px 0;
+    padding: 38px 0;
+  }
+
+  .destaques {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* 14. TELEMÓVEIS */
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 16px;
   }
 
   .logo {
-    width: 150px;
+    width: 125px;
   }
-}
 
-@media (max-width: 575.98px) {
+  .navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .navbar .navbar-nav {
+    gap: 0;
+    padding-top: 8px;
+  }
+
+  .navbar .nav-link {
+    padding: 8px 10px !important;
+    font-size: 0.95rem;
+  }
+
+  .navbar .dropdown-menu {
+    margin-bottom: 8px;
+  }
+
   .hero {
-    min-height: auto;
-    padding: 60px 0;
+    min-height: 0;
+    padding: 30px 0 !important;
   }
 
   .hero h1 {
-    letter-spacing: -1px;
+    margin: 10px 0 16px;
+    font-size: clamp(1.9rem, 7vw, 3rem);
+    letter-spacing: -0.5px;
+  }
+
+  .hero h2 {
+    font-size: clamp(1.35rem, 5vw, 1.8rem);
+  }
+
+  .hero img {
+    max-height: 360px;
+    width: 100%;
+    object-fit: contain;
   }
 
   .texto-intro {
     font-size: 1rem;
+    line-height: 1.7;
   }
 
   .btn {
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-
-  .cartao-musica {
-    padding: 24px;
+    margin-bottom: 8px;
   }
 
   .destaques {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .cartao-musica {
+    padding: 18px;
+  }
+
+  .cartao-musica h3 {
+    font-size: 1.2rem;
+  }
+
+  .cartao-musica p {
+    font-size: 0.97rem;
+    line-height: 1.6;
+  }
+
+  .rodape {
+    padding: 22px 0;
+  }
+
+  .rodape p,
+  .rodape a {
+    font-size: 0.88rem;
   }
 }
 
-/* 11. Preferência por menos animações */
+/* 15. ECRÃS MUITO PEQUENOS */
+
+@media (max-width: 380px) {
+  .hero {
+    padding: 24px 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .cartao-musica {
+    padding: 15px;
+  }
+
+  .cartao-musica h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 9px 14px;
+    font-size: 0.92rem;
+  }
+}
+
+/* 16. ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -348,7 +583,118 @@ button:focus-visible {
   *,
   *::before,
   *::after {
-    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .detalhe-album {
+    padding: 24px;
+    background: #1b1813;
+    border: 1px solid #574523;
+    border-radius: 14px;
+    scroll-margin-top: 100px;
+  }
+
+  .detalhe-album img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+  }
+
+  .detalhe-album h3 {
+    color: #f4c542;
+  }
+
+  .detalhe-album > div > p:first-child {
+    color: #f4c542;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+}
+
+.detalhe-album {
+  padding: 24px;
+  background: #1b1813;
+  border: 1px solid #574523;
+  border-radius: 14px;
+  scroll-margin-top: 100px;
+}
+
+.detalhe-album img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.detalhe-album h3 {
+  color: #f4c542;
+}
+
+.detalhe-album > div > p:first-child {
+  color: #f4c542;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.redes-sociais a {
+  color: #f4c542;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.redes-sociais a:hover,
+.redes-sociais a:focus {
+  color: #ffdc7a;
+  transform: translateY(-3px);
+}
+
+/* Evita dividir palavras a meio */
+.pagina-albuns h1,
+.pagina-albuns h2,
+.pagina-albuns h3,
+.pagina-albuns p,
+.pagina-albuns a {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+/* Títulos dos cartões */
+.pagina-albuns .cartao-musica h3 {
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
+  line-height: 1.3;
+  white-space: normal;
+}
+
+/* Mais espaço para o conteúdo dos cartões */
+.pagina-albuns .cartao-musica .p-4 {
+  padding: 1.25rem !important;
+  min-width: 0;
+}
+
+/* Melhor disposição no telemóvel */
+@media (max-width: 575.98px) {
+  .pagina-albuns .cartao-musica h3 {
+    font-size: 1.2rem;
+  }
+
+  .pagina-albuns .cartao-musica p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .pagina-albuns .cartao-musica .btn {
+    white-space: normal;
   }
 }

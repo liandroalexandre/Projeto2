@@ -21,7 +21,7 @@
   <script src="musica.js" defer></script>
 </head>
 
-<body>
+<body class="pagina-tour">
 
   <!-- 1. CABEÇALHO E MENU -->
   <header>
@@ -41,7 +41,32 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
             <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="albuns.html">Álbuns</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="albuns.html" id="menuAlbuns" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Álbuns
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuAlbuns">
+                <li>
+                  <a class="dropdown-item" href="albuns.html">Todos os álbuns</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#afrohouse">Afrohouse</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#semba">Semba</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#kizomba">Kizomba</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="albuns.html#romantica">Romântica</a>
+                </li>
+              </ul>
+            </li>
+
             <li class="nav-item"><a class="nav-link active" href="tour.html">Tour</a></li>
             <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
           </ul>
@@ -96,7 +121,21 @@
 
   <!-- 4. RODAPÉ -->
   <footer class="rodape text-center py-4">
-    <p>&copy; <span id="ano_atual"></span> Liurame Music. Todos os direitos reservados.</p>
+    <div class="redes-sociais mb-3">
+      <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" target="_blank"
+        rel="noopener noreferrer" aria-label="Instagram de Liurame Music">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://www.facebook.com/liurame" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook de Liurame Music">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+    © <span id="ano_atual"></span> Liurame Music.
+    <a href="documentos/politica-privacidade.pdf" target="_blank" rel="noopener noreferrer">Política de
+      Privacidade</a> · Todos os direitos reservados.
+    <p><a href="index.html" class="text-decoration-none">Voltar ao início</a></p>
   </footer>
 
   <!-- Bootstrap JavaScript -->

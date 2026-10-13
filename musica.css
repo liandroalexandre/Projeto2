@@ -722,3 +722,40 @@ section {
   cursor: pointer;
   filter: contrast(150%);
 }
+/* Ajustes para telemóveis em posição vertical */
+@media (max-width: 576px) {
+  /* Evitar que os detalhes dos álbuns ultrapassem o ecrã */
+  .pagina-albuns .detalhe-album {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 14px;
+    border-width: 1px;
+    box-sizing: border-box;
+  }
+
+  /* Evitar que a imagem e o texto ultrapassem o cartão */
+  .pagina-albuns .detalhe-album img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Evitar que as colunas criem excesso de largura */
+  .pagina-albuns .detalhe-album > div {
+    min-width: 0;
+  }
+
+  /* Evitar que títulos e faixas ultrapassem as laterais */
+  .pagina-albuns .detalhe-album h3,
+  .pagina-albuns .detalhe-album p,
+  .pagina-albuns .lista-faixas {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Remover linhas horizontais entre os detalhes dos álbuns */
+  .pagina-albuns hr {
+    display: none;
+  }
+}

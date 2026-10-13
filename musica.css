@@ -438,11 +438,9 @@ section {
 .rodape a:hover {
   color: #ffffff;
 }
-
 .pagina-albuns hr {
   display: none;
 }
-
 /* 13. TABLETS */
 
 @media (max-width: 991.98px) {
@@ -595,7 +593,7 @@ section {
   .detalhe-album {
     padding: 24px;
     background: #1b1813;
-    border: 1px solid #574523;
+    border: 1px solid #fad729;
     border-radius: 14px;
     scroll-margin-top: 100px;
   }
@@ -615,30 +613,6 @@ section {
     font-weight: 700;
     letter-spacing: 2px;
   }
-}
-
-.detalhe-album {
-  padding: 24px;
-  background: #1b1813;
-  border: 1px solid #574523;
-  border-radius: 14px;
-  scroll-margin-top: 100px;
-}
-
-.detalhe-album img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-}
-
-.detalhe-album h3 {
-  color: #f4c542;
-}
-
-.detalhe-album > div > p:first-child {
-  color: #f4c542;
-  font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .redes-sociais {

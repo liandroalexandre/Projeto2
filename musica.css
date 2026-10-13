@@ -380,7 +380,7 @@ section {
   min-height: 46px;
   padding: 10px 12px;
   color: #ffffff;
-  background-color: #1b1a18;
+  background-color: #ffffff;
   border: 1px solid #777064;
   border-radius: 7px;
 }
@@ -659,12 +659,14 @@ section {
   transform: translateY(-3px);
 }
 
-/* Evita dividir palavras a meio */
+/* Evita dividir palavras a meio na página dos álbuns e playlists */
 .pagina-albuns h1,
 .pagina-albuns h2,
 .pagina-albuns h3,
+.pagina-albuns h4,
 .pagina-albuns p,
-.pagina-albuns a {
+.pagina-albuns a,
+.pagina-albuns li {
   word-break: normal;
   overflow-wrap: normal;
   hyphens: none;
@@ -702,4 +704,21 @@ section {
 .detalhe-album h4 {
   font-weight: bold;
   text-decoration: underline;
+}
+/* Campo de data de nascimento */
+.pagina-contactos #data_nascimento {
+  background-color: #ffffff;
+  color: #17120d;
+  color-scheme: light;
+  min-height: 45px;
+  cursor: pointer;
+}
+
+/* Ícone do calendário mais visível */
+.pagina-contactos #data_nascimento::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: contrast(150%);
 }

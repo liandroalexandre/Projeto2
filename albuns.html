@@ -44,7 +44,7 @@
             <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="albuns.html" id="menuAlbuns" role="button"
+              <a class="nav-link dropdown-toggle" href="albuns.html" id="menuAlbuns" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Álbuns
               </a>
@@ -93,11 +93,11 @@
         <!-- ÁLBUM AFROHOUSE -->
         <div class="col-6 col-lg-3">
           <article class="card cartao-musica h-100">
-            <img src="imagens/capas/albumafro.webp" class="card-img-top"
-              alt="Capa ilustrativa do álbum Ritmos de África" loading="lazy">
+            <img src="imagens/capas/albumafro.webp" class="card-img-top" alt="Capa ilustrativa do álbum Essentials"
+              loading="lazy">
             <div class="card-body text-center">
               <p class="text-uppercase">Afrohouse</p>
-              <h2 class="h5 card-title">Essentialis Volume I </h2>
+              <h2 class="h5 card-title">Essentials Volume I </h2>
               <a href="#afrohouse" class="btn btn-outline-warning">
                 <i class="fas fa-music"></i> Descobrir
               </a>
@@ -108,8 +108,8 @@
         <!-- ÁLBUM SEMBA -->
         <div class="col-6 col-lg-3">
           <article class="card cartao-musica h-100">
-            <img src="imagens/capas/albumsemba.webp" class="card-img-top"
-              alt="Capa ilustrativa do álbum Raízes do Semba" loading="lazy">
+            <img src="imagens/capas/albumsemba.webp" class="card-img-top" alt="Capa ilustrativa do álbum Essentials"
+              loading="lazy">
             <div class="card-body text-center">
               <p class="text-uppercase">Semba</p>
               <h2 class="h5 card-title">Risca o Chão</h2>
@@ -123,8 +123,8 @@
         <!-- ÁLBUM KIZOMBA -->
         <div class="col-6 col-lg-3">
           <article class="card cartao-musica h-100">
-            <img src="imagens/capas/albumkizomba.webp" class="card-img-top"
-              alt="Capa ilustrativa do álbum Corpos em Sintonia" loading="lazy">
+            <img src="imagens/capas/albumkizomba.webp" class="card-img-top" alt="Capa ilustrativa do álbum Sentimentos"
+              loading="lazy">
             <div class="card-body text-center">
               <p class="text-uppercase">Kizomba</p>
               <h2 class="h5 card-title">Sentimentos</h2>
@@ -138,8 +138,8 @@
         <!-- ÁLBUM ROMÂNTICO -->
         <div class="col-6 col-lg-3">
           <article class="card cartao-musica h-100">
-            <img src="imagens/capas/albumromantica.webp" class="card-img-top"
-              alt="Capa ilustrativa do álbum Amor Sem Fim" loading="lazy">
+            <img src="imagens/capas/albumromantica.webp" class="card-img-top" alt="Capa ilustrativa do álbum Protetor"
+              loading="lazy">
             <div class="card-body text-center">
               <p class="text-uppercase">Romântica</p>
               <h2 class="h5 card-title">Protetor</h2>
@@ -158,57 +158,120 @@
 
     </section>
 
+
     <section class="container py-5" id="detalhes-albuns">
-      <div class="text-center mb-4">
+
+      <div class="text-center mb-5">
         <p class="text-uppercase">Conhece cada sonoridade</p>
         <h2>Detalhes dos álbuns</h2>
+        <p>Descobre as faixas de cada álbum.</p>
       </div>
 
-      <article id="afrohouse" class="detalhe-album row align-items-center g-4 mb-5">
-        <div class="col-md-4">
-          <img src="imagens/capas/albumafro.webp" class="img-fluid rounded" alt="Capa ilustrativa de Ritmos de África">
+      <!-- ÁLBUM AFRO HOUSE -->
+      <article id="afrohouse" class="detalhe-album row align-items-start g-4 mb-5">
+
+        <div class="col-5 col-md-4">
+          <img src="imagens/capas/albumafro.webp" class="img-fluid rounded shadow"
+            alt="Capa do álbum Essentials Volume I" loading="lazy">
         </div>
-        <div class="col-md-8">
-          <p>AFROHOUSE</p>
-          <h3>Ritmos de África</h3>
-          <p>Uma proposta visual inspirada em ritmos eletrónicos e influências africanas.</p>
+
+        <div class="col-7 col-md-8">
+          <p class="text-uppercase mb-1">Afro House</p>
+          <h3>Essentials Volume I</h3>
+          <p>Batidas eletrónicas, percussão africana e energia para a pista de dança.</p>
+
+          <h4 class="h6 mt-4">Lista de faixas</h4>
+          <ol class="lista-faixas">
+            <li>Ritmos da Madrugada ft. [Liandro]</li>
+            <li>Fogo na Pista ft. [Leo Peres]</li>
+            <li>Energia Tribal</li>
+            <li>Dança das Estrelas</li>
+            <li>Vibração Africana</li>
+          </ol>
         </div>
+
       </article>
 
-      <article id="semba" class="detalhe-album row align-items-center g-4 mb-5">
-        <div class="col-md-4">
-          <img src="imagens/capas/albumsemba.webp" class="img-fluid rounded" alt="Capa ilustrativa de Raízes do Semba">
+      <hr class="my-5">
+
+      <!-- ÁLBUM SEMBA -->
+      <article id="semba" class="detalhe-album row align-items-start g-4 mb-5">
+
+        <div class="col-5 col-md-4">
+          <img src="imagens/capas/albumsemba.webp" class="img-fluid rounded shadow" alt="Capa do álbum Risca o Chão"
+            loading="lazy">
         </div>
-        <div class="col-md-8">
-          <p>SEMBA</p>
-          <h3>Raízes do Semba</h3>
-          <p>Uma homenagem visual à tradição, à dança e à identidade musical angolana.</p>
+
+        <div class="col-7 col-md-8">
+          <p class="text-uppercase mb-1">Semba</p>
+          <h3>Risca o Chão</h3>
+          <p>Uma homenagem à tradição, à dança e à identidade musical angolana.</p>
+
+          <h4 class="h6 mt-4">Lista de faixas</h4>
+          <ol class="lista-faixas">
+            <li>Raízes da Nossa Terra ft. [Alexandre]</li>
+            <li>Gingado de Angola ft. [Leo Peres]</li>
+            <li>Semba no Coração</li>
+            <li>Festa na Banda</li>
+            <li>Alegria da Nossa Gente</li>
+          </ol>
         </div>
+
       </article>
 
-      <article id="kizomba" class="detalhe-album row align-items-center g-4 mb-5">
-        <div class="col-md-4">
-          <img src="imagens/capas/albumkizomba.webp" class="img-fluid rounded"
-            alt="Capa ilustrativa de Corpos em Sintonia">
+      <hr class="my-5">
+
+      <!-- ÁLBUM KIZOMBA -->
+      <article id="kizomba" class="detalhe-album row align-items-start g-4 mb-5">
+
+        <div class="col-5 col-md-4">
+          <img src="imagens/capas/albumkizomba.webp" class="img-fluid rounded shadow" alt="Capa do álbum Sentimentos"
+            loading="lazy">
         </div>
-        <div class="col-md-8">
-          <p>KIZOMBA</p>
-          <h3>Corpos em Sintonia</h3>
-          <p>Uma proposta inspirada na proximidade, na dança e na ligação entre pessoas.</p>
+
+        <div class="col-7 col-md-8">
+          <p class="text-uppercase mb-1">Kizomba</p>
+          <h3>Sentimentos</h3>
+          <p>Uma viagem musical inspirada na paixão, na dança e na ligação entre pessoas.</p>
+
+          <h4 class="h6 mt-4">Lista de faixas</h4>
+          <ol class="lista-faixas">
+            <li>No Calor do Teu Corpo</li>
+            <li>Dança Comigo ft. [Amélia]</li>
+            <li>Teu Beijo Tem Magia</li>
+            <li>Até o Sol Nascer ft. [Costa]</li>
+            <li>Nosso Segredo</li>
+          </ol>
         </div>
+
       </article>
 
-      <article id="romantica" class="detalhe-album row align-items-center g-4">
-        <div class="col-md-4">
-          <img src="imagens/capas/albumromantica.webp" class="img-fluid rounded" alt="Capa ilustrativa de Amor Sem Fim">
-        </div>
-        <div class="col-md-8">
-          <p>ROMÂNTICA</p>
-          <h3>Amor Sem Fim</h3>
-          <p>Uma proposta visual dedicada aos sentimentos e às histórias de amor.</p>
-        </div>
-      </article>
+      <hr class="my-5">
 
+      <!-- ÁLBUM ROMÂNTICA -->
+      <article id="romantica" class="detalhe-album row align-items-start g-4">
+
+        <div class="col-5 col-md-4">
+          <img src="imagens/capas/albumromantica.webp" class="img-fluid rounded shadow" alt="Capa do álbum Protetor"
+            loading="lazy">
+        </div>
+
+        <div class="col-7 col-md-8">
+          <p class="text-uppercase mb-1">Romântica</p>
+          <h3>Protetor</h3>
+          <p>Canções dedicadas aos sentimentos, à saudade e às histórias de amor.</p>
+
+          <h4 class="h6 mt-4">Lista de faixas</h4>
+          <ol class="lista-faixas">
+            <li>Amor Sem Fim</li>
+            <li>Tu És o Meu Mundo</li>
+            <li>Promessas ao Luar ft. [Liandro]</li>
+            <li>Se o Tempo Voltasse</li>
+            <li>Para Sempre Teu</li>
+          </ol>
+        </div>
+
+      </article>
 
     </section>
 

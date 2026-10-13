@@ -698,3 +698,8 @@ section {
     white-space: normal;
   }
 }
+
+.detalhe-album h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}

@@ -1,7 +1,7 @@
-/* ==========================================
+/* =========================================================
    LIURAME MUSIC — CSS PRINCIPAL
-   Tema: escuro, dourado e responsivo
-   ========================================== */
+   
+   ========================================================= */
 
 /* 1. CORES E CONFIGURAÇÕES */
 :root {
@@ -44,6 +44,7 @@ h3,
 h4,
 h5 {
   color: var(--cor-texto);
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -171,6 +172,15 @@ header {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* Reduzir e centrar a imagem principal da página Tour */
+.pagina-tour .imagem-principal-tour {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -340,6 +350,11 @@ section {
   font-weight: 700;
 }
 
+/* Data e local dos concertos em branco */
+.pagina-tour .cartao-musica .card-body p strong {
+  color: #ffffff;
+}
+
 /* 10. REDES SOCIAIS */
 
 .icone-social {
@@ -379,7 +394,6 @@ section {
 .pagina-contactos .form-select {
   min-height: 46px;
   padding: 10px 12px;
-  color: #ffffff;
   background-color: #ffffff;
   border: 1px solid #777064;
   border-radius: 7px;
@@ -438,6 +452,7 @@ section {
 .rodape a:hover {
   color: #ffffff;
 }
+/* Esconde separadores horizontais apenas na página dos álbuns */
 .pagina-albuns hr {
   display: none;
 }
@@ -590,31 +605,20 @@ section {
     transition-duration: 0.01ms !important;
   }
 
+  /* Mantém apenas as diferenças específicas deste modo:
+     a borda e a altura máxima da capa. */
   .detalhe-album {
-    padding: 24px;
-    background: #1b1813;
-    border: 1px solid #fad729;
-    border-radius: 14px;
-    scroll-margin-top: 100px;
+    border-color: #fad729;
   }
 
   .detalhe-album img {
-    width: 100%;
     max-height: 340px;
-    object-fit: cover;
-  }
-
-  .detalhe-album h3 {
-    color: #f4c542;
-  }
-
-  .detalhe-album > div > p:first-child {
-    color: #f4c542;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
 }
 
+/* 17. DETALHES DOS ÁLBUNS E LISTAS DE FAIXAS */
+
+/* Cartão de detalhe do álbum */
 .detalhe-album {
   padding: 24px;
   background: #1b1813;
@@ -623,16 +627,19 @@ section {
   scroll-margin-top: 100px;
 }
 
+/* Capa do álbum */
 .detalhe-album img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
 }
 
+/* Título do álbum */
 .detalhe-album h3 {
   color: #f4c542;
 }
 
+/* Identificação do género musical */
 .detalhe-album > div > p:first-child {
   color: #f4c542;
   font-weight: 700;
@@ -703,11 +710,12 @@ section {
   }
 }
 
+/* Título "Lista de faixas" */
 .detalhe-album h4 {
   font-weight: bold;
   text-decoration: underline;
 }
-/* Campo de data de nascimento */
+/* 18. FORMULÁRIO DE CONTACTOS — CAMPO DE DATA DE NASCIMENTO */
 .pagina-contactos #data_nascimento {
   background-color: #ffffff;
   color: #17120d;
@@ -754,10 +762,5 @@ section {
   .pagina-albuns .lista-faixas {
     max-width: 100%;
     overflow-wrap: anywhere;
-  }
-
-  /* Remover linhas horizontais entre os detalhes dos álbuns */
-  .pagina-albuns hr {
-    display: none;
   }
 }

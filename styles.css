@@ -333,7 +333,7 @@ header h1 {
   max-width: 70%;
   height: auto;
 }
-
+/* Setas de navegação do lightbox */
 .seta-album {
   display: flex;
   align-items: center;
@@ -353,11 +353,19 @@ header h1 {
     color 0.2s;
 }
 
-.seta-album:hover {
-  background-color: #d98b36;
-  color: #241710;
+/* Efeito hover apenas em dispositivos com rato */
+@media (hover: hover) and (pointer: fine) {
+  .seta-album:hover {
+    background-color: #d98b36;
+    color: #241710;
+  }
 }
 
+/* Foco visível na navegação por teclado */
+.seta-album:focus-visible {
+  outline: 3px solid #f2aa50;
+  outline-offset: 3px;
+}
 /* CALCULADORA */
 
 #order-form {

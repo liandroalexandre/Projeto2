@@ -2,255 +2,109 @@
 <html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Descobre o universo musical de Liurame Music, os seus ritmos, álbuns e concertos.">
-  <meta name="keywords" content="Liurame Music, música africana, kizomba, semba, afrohouse, álbuns, concertos">
+    <meta charset="UTF-8">
+    <meta name="author" content="LIURAME MUSIC">
+    <meta name="description"
+        content="Loja online LIURAME MUSIC. Descobre álbuns de Afrohouse, Semba, Kizomba e música romântica, consulta os detalhes e calcula o valor total.">
+    <meta name="keywords" content="LIURAME MUSIC, loja de música, Afrohouse, Semba, Kizomba, álbuns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIURAME MUSIC | Loja Online</title>
 
-  <!-- Google Fonts: fonte Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-  <title>Liurame Music | Música, Ritmo e Emoção</title>
-
-
-  <!-- CSS do Bootstrap 5.3.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!--  CSS do FontAwesome para ícones -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-  <link rel="stylesheet" href="musica.css">
-
-  <!-- JavaScript -->
-  <script src="musica.js" defer></script>
+    <!-- Estilos e biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="pagina-inicio">
-  <header>
-    <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="imagens/logotipos/logolimusic7.png" alt="Logótipo oficial da Liurame Music" class="logo">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html" aria-current="page">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sobre.html">Sobre</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="albuns.html" id="menuAlbuns" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Álbuns
-              </a>
-
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="menuAlbuns">
-                <li>
-                  <a class="dropdown-item" href="albuns.html">Todos os álbuns</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="albuns.html#afrohouse">Afrohouse</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="albuns.html#semba">Semba</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="albuns.html#kizomba">Kizomba</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="albuns.html#romantica">Romântica</a>
-                </li>
-              </ul>
-
-
-            <li class="nav-item">
-              <a class="nav-link" href="tour.html">Tour</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contactos.html">Contactos</a>
-            </li>
-          </ul>
+<body>
+    <!-- Cabeçalho e identidade da loja -->
+    <header class="cabecalho-loja">
+        <div class="marca-loja">
+            <img src="imagens/logotipos/logolimusic.png" alt="Logótipo da LIURAME MUSIC" class="logo-loja">
+            <div class="texto-marca">
+                <h1>LIURAME MUSIC</h1>
+                <p>Loja Online</p>
+            </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <!-- DESTAQUE PRINCIPAL -->
-  <section class="hero">
-    <div class="container">
-      <div class="row align-items-center g-4">
+    </header>
 
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
-          <p class="text-uppercase">Ritmo • Cultura • Emoção</p>
+    <main>
+        <!-- Filtro de categorias preenchido a partir do catálogo JSON -->
+        <section id="filter-section">
+            <h2>Filtrar por Categoria</h2>
+            <select id="category-filter" aria-label="Filtrar álbuns por categoria">
+                <option value="">Todas as Categorias</option>
+            </select>
+        </section>
 
-          <h1>Liurame Music</h1>
-
-          <h2>A música que toca a alma.</h2>
-
-          <p>
-            Uma viagem musical entre os sons, os sentimentos
-            e a energia de África.
-          </p>
-
-          <a href="albuns.html" class="btn btn-warning me-2 mb-2">
-            <i class="fa-solid fa-compact-disc"></i>
-            Descobrir álbuns
-          </a>
-
-          <a href="tour.html" class="btn btn-outline-light mb-2">
-            <i class="fa-solid fa-music"></i>
-            Ver concertos
-          </a>
+        <!-- Lista de álbuns criada dinamicamente pelo JavaScript -->
+        <div id="product-list" aria-live="polite">
+            <p class="mensagem-catalogo">A carregar catálogo...</p>
         </div>
 
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
-          <img src="imagens/capaindex1.webp" class="img-fluid rounded" alt="Imagem de destaque de Liurame Music">
-        </div>
+        <!-- Calculadora do valor total da encomenda -->
+        <div id="order-form">
+            <h2>Calcular Valor Total</h2>
+            <form id="calc-form" novalidate>
+                <label for="product">Escolha um produto:</label>
+                <select id="product" name="product">
+                    <!-- Opções preenchidas a partir do catálogo JSON -->
+                </select>
 
-      </div>
+                <label for="quantity">Quantidade:</label>
+                <div class="quantity-control">
+                    <button type="button" id="decrease-quantity" aria-label="Diminuir quantidade">−</button>
+                    <input type="number" id="quantity" name="quantity" min="1" step="1" value="1">
+                    <button type="button" id="increase-quantity" aria-label="Aumentar quantidade">+</button>
+                </div>
+
+                <button type="submit" id="calculate">Calcular Valor</button>
+            </form>
+            <div id="total-value" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <!-- Janela de detalhes do álbum e navegação entre produtos -->
+    <div id="lightbox" style="display:none;">
+        <div class="lightbox-content">
+            <button type="button" class="close-btn" aria-label="Fechar detalhes do álbum">&times;</button>
+            <h2 id="lightbox-title">Detalhes do álbum</h2>
+
+            <div class="lightbox-navegacao">
+                <button type="button" id="album-anterior" class="seta-album" aria-label="Ver álbum anterior">
+                    &#10094;
+                </button>
+                <img id="lightbox-image" src="imagens/capas/albumafro.webp" alt="Capa do álbum">
+                <button type="button" id="album-seguinte" class="seta-album" aria-label="Ver álbum seguinte">
+                    &#10095;
+                </button>
+            </div>
+
+            <p id="lightbox-description"></p>
+            <h3 id="lightbox-tracks-title">&#127925; Lista de músicas</h3>
+            <ol id="lightbox-tracks"></ol>
+            <p id="lightbox-price"></p>
+        </div>
     </div>
-  </section>
 
-  <!-- SECÇÃO DE DESCOBERTA -->
-  <main>
-    <section class="container py-5">
-      <div class="text-center mb-4">
-        <p class="text-uppercase">Entra no universo musical</p>
-        <h2>Descobre Liurame Music</h2>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- CARTÃO SOBRE -->
-        <div class="col-md-4">
-          <article class="cartao-musica h-100">
-            <div class="p-4">
-              <i class="fa-solid fa-music fa-2x mb-3"></i>
-              <h3>O projeto</h3>
-              <p>
-                Conhece a identidade e as influências
-                musicais de Liurame Music.
-              </p>
-              <a href="sobre.html" class="btn btn-outline-warning">
-                Saber mais
-              </a>
-            </div>
-          </article>
+    <!-- Rodapé: contacto e política de privacidade -->
+    <footer class="footer-loja">
+        <h3>LIURAME MUSIC</h3>
+        <div>
+            <a href="https://wa.me/351937774281" class="footer-whatsapp" target="_blank" rel="noopener noreferrer"
+                aria-label="Contactar a LIURAME MUSIC pelo WhatsApp" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
         </div>
+        <p class="footer-privacidade">
+            &copy; 2026 LIURAME MUSIC. Todos os direitos reservados.
+            <a href="documentos/politicaprivacidade.pdf" target="_blank" rel="noopener noreferrer">
+                Política de Privacidade
+            </a>
+        </p>
+    </footer>
 
-        <!-- CARTÃO ÁLBUNS -->
-        <div class="col-md-4">
-          <article class="cartao-musica h-100">
-            <img src="imagens/capas/albumafro.webp" class="img-fluid" alt="Capa ilustrativa do álbum Ritmos de África">
-
-            <div class="p-4">
-              <i class="fa-solid fa-compact-disc fa-2x mb-3"></i>
-              <h3>Álbuns</h3>
-              <p>
-                Explora diferentes sonoridades:
-                Afrohouse, Semba, Kizomba e Romântica.
-              </p>
-              <a href="albuns.html" class="btn btn-outline-warning">
-                Explorar
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- CARTÃO CONCERTOS -->
-        <div class="col-md-4">
-          <article class="cartao-musica h-100">
-            <img src="imagens/cartaoconcerto.webp" class="img-fluid" alt="Imagem ilustrativa de um concerto ao vivo">
-
-            <div class="p-4">
-              <i class="fa-solid fa-ticket fa-2x mb-3"></i>
-              <h3>Ao vivo</h3>
-              <p>
-                Consulta a secção de concertos para
-                conhecer as informações disponíveis.
-              </p>
-              <a href="tour.html" class="btn btn-outline-warning">
-                Ver concertos
-              </a>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CHAMADA PARA CONTACTO -->
-    <section class="redes-destaque text-center py-5">
-      <div class="container">
-        <h2>Vamos manter o contacto?</h2>
-        <p>Envia uma mensagem à Liurame Music.</p>
-
-        <a href="contactos.html" class="btn btn-warning">
-          <i class="fa-solid fa-envelope"></i>
-          Contactar
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- RODAPÉ -->
-  <footer class="rodape text-center py-4">
-
-    <p>
-      Email:
-      <a href="mailto:comercial.liurame@gmail.com">
-        comercial.liurame@gmail.com
-      </a>
-    </p>
-
-    <p>
-      Telefone:
-      <a href="tel:+351937774281">
-        937 774 281
-      </a>
-    </p>
-
-    <div class="container">
-
-
-      <div class="redes-sociais mb-3">
-        <a href="https://www.instagram.com/liuramesabores?igsh=MXJxaG44bmI0d2Y3aQ==" target="_blank"
-          rel="noopener noreferrer" aria-label="Instagram de Liurame Music">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.facebook.com/liurame" target="_blank" rel="noopener noreferrer"
-          aria-label="Facebook de Liurame Music">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-
-      </div>
-
-      © <span id="ano_atual"></span> Liurame Music.
-      <a href="documentos/politicaprivacidade.pdf" target="_blank" rel="noopener noreferrer">Política de
-        Privacidade</a> · Todos os direitos reservados.
-
-
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <!-- Funcionalidades do catálogo, lightbox e calculadora -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>

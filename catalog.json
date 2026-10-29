@@ -1,0 +1,82 @@
+{
+    "categories": [
+        {
+            "id": "afrohouse",
+            "name": "Afrohouse"
+        },
+        {
+            "id": "semba",
+            "name": "Semba"
+        },
+        {
+            "id": "kizomba",
+            "name": "Kizomba"
+        },
+        {
+            "id": "romantica",
+            "name": "Romântica"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "name": "Essentials Volume I",
+            "description": "Álbum de Afrohouse com batidas eletrónicas, percussão africana e muita energia.",
+            "price": "16.99",
+            "category": "afrohouse",
+            "image": "imagens/capas/albumafro.webp",
+            "tracks": [
+                "Ritmos da Madrugada",
+                "Fogo na Pista",
+                "Energia Tribal",
+                "Dança das Estrelas",
+                "Vibração Africana"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Risca o Chão",
+            "description": "Álbum de Semba com ritmos tradicionais e muita alegria.",
+            "price": "14.99",
+            "category": "semba",
+            "image": "imagens/capas/albumsemba.webp",
+            "tracks": [
+                "Raízes ft. [Leo]",
+                "Gingado Angola",
+                "Semba Muxima",
+                "Festa na Banda",
+                "Alegria da Banda"
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Sentimentos",
+            "description": "Álbum de Kizomba com melodias envolventes e românticas.",
+            "price": "14.99",
+            "category": "kizomba",
+            "image": "imagens/capas/albumkizomba.webp",
+            "tracks": [
+                "Calor Corporal",
+                "Delicadeza",
+                "Brisa ft. [Costa]",
+                "Amanhecida",
+                "Nosso Segredo"
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Protetor",
+            "description": "Álbum de música romântica com canções cheias de emoção.",
+            "price": "13.99",
+            "category": "romantica",
+            "image": "imagens/capas/albumromantica.webp",
+            "tracks": [
+                "Amor Sem Fim",
+                "Meu Mundo",
+                "Apenas Promessas ft. [Liandro]",
+                "Retorno",
+                "Para Sempre Teu"
+            ]
+        }
+    ]
+}
